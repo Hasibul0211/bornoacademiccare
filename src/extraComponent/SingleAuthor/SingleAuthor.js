@@ -11,11 +11,11 @@ const SingleAuthor = (props) => {
                     <img src="" alt="img box" />
                 </div>
                 <div className='infoBox'>
-                    <h1 style={{ color: 'white' }}>Name: {name}</h1>
-                    <h3 style={{ color: 'white', margin: 0 }}>Post: {position}</h3>
-                    <h3 style={{ color: 'white', margin: 0 }}>Contact: {contact}</h3>
-                    <h3 style={{ color: 'white', margin: 0 }}>Education: {education}</h3>
-                    <h3 style={{ color: 'white', margin: 0 }}>Education Year: {year}</h3>
+                    <h1 style={{ color: 'white', fontSize: '25px' }}>Name: {name}</h1>
+                    <h3 style={{ color: 'white', margin: 0, fontSize: '15px' }}>Post: {position}</h3>
+                    <h3 style={{ color: 'white', margin: 0, fontSize: '15px' }}>Contact: {contact}</h3>
+                    <h3 style={{ color: 'white', margin: 0, fontSize: '15px' }}>Education: {education}</h3>
+                    <h3 style={{ color: 'white', margin: 0, fontSize: '15px' }}>Education Year: {year}</h3>
                 </div>
                 <div className='editBtn'>
                     <button onClick={() => alert('edit button clicked')}>Edit Info</button>
