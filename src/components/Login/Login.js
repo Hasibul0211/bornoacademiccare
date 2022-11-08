@@ -1,11 +1,13 @@
 import React, { useRef, useState } from 'react';
 import "./Login.css"
 import img from "../../photos/login2.png"
+import { useNavigate } from 'react-router-dom';
 
 
 
 
 const Login = () => {
+
     const [data, setData] = useState(true);
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('')
@@ -14,24 +16,31 @@ const Login = () => {
     const emailField = useRef();
     const passField = useRef();
 
+
+
     const loginForm = () => {
         setData(true)
     }
-    const regiterForm = () => {
-        setData(false)
-    }
-
     const handleOnChange = () => {
         const emailValue = emailField.current.value;
         setEmail(emailValue)
 
-        const passValue = emailField.current.value;
+        const passValue = passField.current.value;
         setPassword(passValue)
     }
 
-
+    console.log(password);
+    // navigate code here
+    const navigate = useNavigate()
     const loginBtn = (e) => {
-        alert('login button clicked')
+
+        if (email === process.env.REACT_APP_EMAIL && password === process.env.REACT_APP_PASSWORD) {
+            navigate('/home')
+        }
+        else {
+            alert('username or password missmatch')
+        }
+
         e.preventDefault()
     }
 
@@ -39,6 +48,9 @@ const Login = () => {
 
     // Register details
 
+    const regiterForm = () => {
+        setData(false)
+    }
     const [regName, setRegName] = useState('')
     const [regEmail, setRegEmail] = useState('')
     const [regPass, setRegPass] = useState('')
@@ -58,7 +70,6 @@ const Login = () => {
         const regPassValue = regPassField.current.value;
         setRegPass(regPassValue)
     }
-    console.log(regName);
     const registerBtn = (e) => {
         const user = {
             name: regName,
@@ -92,10 +103,10 @@ const Login = () => {
                         {/* login form here */}
 
                         {
-                            data ? <form>
+                            data ? <form onSubmit={loginBtn}>
                                 <input type="text" placeholder='Enter Your Email' ref={emailField} onChange={handleOnChange} />
                                 <br />
-                                <input type="password" placeholder='Enter Your Password' onChange={handleOnChange} ref={passField} />
+                                <input type="password" placeholder='Enter Your Password' ref={passField} onChange={handleOnChange} />
                                 <br />
                                 <button type="submit">Login</button>
 

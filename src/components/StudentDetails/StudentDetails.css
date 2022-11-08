@@ -1,6 +1,6 @@
 .shortSection {
     width: 20%;
-    margin: 1%;
+    margin: 0 5px;
     display: flex;
     justify-content: center;
     padding: 0;
@@ -9,26 +9,28 @@
 
 .shortSection p {
     color: black;
-    border: 5px solid rgb(26, 151, 10);
-    height: 50px;
+    font-size: 15px;
+    border: 3px solid rgb(26, 151, 10);
+    height: 40px;
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 180px;
+    width: 150px;
     border-radius: 10px 0 0 10px;
-    font-weight: 800;
+    font-weight: 700;
     text-transform: capitalize;
     outline-color: rgb(26, 151, 10);
 
 }
 
 .shortSection select {
-    height: 60px;
-    border: 5px solid rgb(26, 151, 10);
+    height: 46px;
+    width: 80px;
+    border: 3px solid rgb(26, 151, 10);
     border-radius: 0 10px 10px 0;
     background-color: rgb(26, 151, 10);
     color: white;
-    font-size: 20px;
+    font-size: 15px;
     font-weight: 600;
     outline-color: rgb(26, 151, 10);
     offset: black;

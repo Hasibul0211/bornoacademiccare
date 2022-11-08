@@ -22,7 +22,7 @@
 }
 
 .form-section {
-    width: 80%;
+    width: 70%;
     height: 350px;
     margin-top: 5%;
     padding-top: 5%;
@@ -30,23 +30,27 @@
 }
 
 .secondPart {
-
-    width: 70%;
-    height: 600px;
+    width: 90%;
+    height: 500px;
     background-image: url('../../photos/borno\ logo.png');
     background-repeat: no-repeat;
     background-position: 100% 100%;
     background-size: cover;
     background-blend-mode: multiply;
     opacity: .9;
-    margin-left: 5%;
-    margin-top: 5%;
+    margin-left: 0;
+    margin-top: 1%;
+}
+
+.form-section {
+
+    width: 83%;
 }
 
 .form-section input[type='text'],
 [type='password'] {
     width: 400px;
-    height: 50px;
+    height: 40px;
     margin-top: 3px;
     border-radius: 5px;
 }
