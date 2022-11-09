@@ -1,6 +1,8 @@
 import React from 'react';
 import { useState } from 'react';
-import './StudentDetails.css'
+import './StudentDetails.css';
+import loading from '../../photos/loading.gif'
+import Footer from '../Shared/Footer/Footer';
 const StudentDetails = () => {
     const [selectValue, setSelectValue] = useState('')
     const onChangeHandle = (e) => {
@@ -30,6 +32,10 @@ const StudentDetails = () => {
             <div style={{ width: '100%', height: '30px', backgroundColor: '#393E46' }}>
 
             </div>
+            <div>
+                <img src={loading} alt="loading im" style={{ marginLeft: '25%' }} />
+            </div>
+            <Footer></Footer>
         </div>
     );
 };

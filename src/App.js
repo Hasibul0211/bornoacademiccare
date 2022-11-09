@@ -5,6 +5,7 @@ import Login from './components/Login/Login';
 import Author from './components/Author/Author';
 import OverView from './components/OverView/OverView';
 import StudentDetails from './components/StudentDetails/StudentDetails';
+import AddStudent from './components/AddStudent/AddStudent';
 function App() {
   return (
     <div className="App">
@@ -16,6 +17,7 @@ function App() {
           <Route path='author' element={<Author></Author>}></Route>
           {/* <Route path='overview' element={<OverView></OverView>}></Route> */}
           <Route path='student-details' element={<StudentDetails></StudentDetails>}></Route>
+          <Route path='add-student-info' element={<AddStudent></AddStudent>}></Route>
         </Route>
 
       </Routes>

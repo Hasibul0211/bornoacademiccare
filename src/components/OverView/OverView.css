@@ -1,0 +1,38 @@
+.TsCountD {
+    width: 50%;
+    height: 200px;
+    border: 3px solid black;
+    margin: 5%;
+    text-align: center;
+    border-radius: 5px;
+    background-color: #90A17D;
+    color: yellow;
+    box-shadow: 1px 1px 36px 2px rgb(191, 191, 218);
+}
+
+.TsCountD h3 {
+    border-bottom: 5px solid rgb(4, 5, 68);
+    margin: 3% 15%;
+    padding: 5px;
+    font-size: 30px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.TsCountD h1 {
+    font-size: 55px;
+    font-weight: bold;
+    margin: 1px;
+    padding: 10px;
+    background-color: rgb(3, 3, 19);
+    color: white;
+    margin: 2% 15%;
+    border-radius: 5px;
+
+}
+
+.pieChart {
+    width: 50%;
+    height: 300px;
+    margin: 0 auto;
+    text-align: center;
+}

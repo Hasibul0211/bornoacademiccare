@@ -8,7 +8,11 @@ import { RiPagesFill } from "react-icons/ri";
 import { MdOutlineRemoveRedEye } from "react-icons/md";
 import Footer from '../Shared/Footer/Footer';
 const Home = () => {
-    const [show, setShow] = useState(false)
+    // const [student, setStudent] = useState(false)
+    // const [show, setShow] = useState(false)
+
+    const [stu, setStu] = useState(false);
+    const [fee, setFee] = useState(false)
 
 
 
@@ -36,13 +40,31 @@ const Home = () => {
                             <li> <HiUserGroup className='icons' />
                                 <Link to="author" style={{ textDecoration: 'none', color: 'white' }}>Author</Link>
                             </li>
-                            <li onClick={() => setShow(!show)}> <FaUserGraduate className='icons' />Students</li>
+                            <li onClick={() => setStu(!stu)}> <FaUserGraduate className='icons' />Students</li>
                             {
-                                show && <li> <HiInformationCircle className='icons' />
-                                    <Link to="student-details" style={{ textDecoration: 'none', color: 'white' }}>Student Details</Link>
-                                </li>
+                                stu &&
+                                <div>
+                                    <li>
+                                        <Link to="student-details" style={{ textDecoration: 'none', color: 'white', fontSize: '17px', marginLeft: '20px' }}>Student Details</Link>
+                                    </li>
+                                    <li>
+                                        <Link to="add-student-info" style={{ textDecoration: 'none', color: 'white', fontSize: '17px', marginLeft: '20px' }}>Add Student Details</Link>
+                                    </li>
+                                </div>
+
                             }
-                            <li> <RiPagesFill className='icons' />Tution fees</li>
+                            <li onClick={() => setFee(!fee)}> <RiPagesFill className='icons' />Tution fees</li>
+                            {
+                                fee &&
+                                <div>
+                                    <li>
+                                        <Link to="student-details" style={{ textDecoration: 'none', color: 'white', fontSize: '17px', marginLeft: '20px' }}>Fees Record(Running)</Link>
+                                    </li>
+                                    <li>
+                                        <Link to="student-details" style={{ textDecoration: 'none', color: 'white', fontSize: '17px', marginLeft: '20px' }}>Previouse Fees Records</Link>
+                                    </li>
+                                </div>
+                            }
 
 
 
