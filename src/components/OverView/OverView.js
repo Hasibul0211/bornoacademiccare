@@ -1,6 +1,5 @@
 import React from 'react';
 import './OverView.css';
-import loading from '../../photos/loading.gif'
 import PieChart from '../Shared/PieChart/PieChart';
 const OverView = () => {
     return (
