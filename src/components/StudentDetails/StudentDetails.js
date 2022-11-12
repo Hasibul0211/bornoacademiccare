@@ -1,8 +1,6 @@
 import React from 'react';
 import { useState } from 'react';
 import './StudentDetails.css';
-import loading from '../../photos/loading.gif'
-import Footer from '../Shared/Footer/Footer';
 const StudentDetails = () => {
     const [selectValue, setSelectValue] = useState('')
     const onChangeHandle = (e) => {
