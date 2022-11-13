@@ -21,13 +21,13 @@ const PieChart = () => {
 
 
     return (
-        <div style={{ width: '600px', height: '500px', margin: "-15% 0", padding: 0 }}>
+        <div style={{ width: '600px', height: '360px', padding: 0, marginLeft: '5%' }}>
             <Chart
                 chartType="PieChart"
                 data={data}
                 options={options}
                 width={"100%"}
-                height={"400px"}
+                height={"100%"}
             />
         </div>
     );

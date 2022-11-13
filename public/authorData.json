@@ -5,7 +5,8 @@
         "position": "Parents Counselor & Accountants",
         "contact": "01626205938",
         "education": "Electrical & Electronics Engineering",
-        "year": "9th semesters"
+        "year": "9th semesters",
+        "photo": "https://i.ibb.co/C0vm4dR/hasibul.jpg"
     },
     {
         "id": 2,
@@ -13,14 +14,16 @@
         "position": "Managing Director",
         "contact": "01627644029",
         "education": "Bangla",
-        "year": "Final year"
+        "year": "Final year",
+        "photo": "https://i.ibb.co/PQ311HL/mehedi.jpg"
     },
     {
         "id": 3,
         "name": "Nizam Uddin Nahid",
         "position": "Student Coordinator & Manager",
         "contact": "01627644029",
-        "education": "Bangla",
-        "year": "Final year"
+        "education": "ICT",
+        "year": "Final year",
+        "photo": "https://i.ibb.co/m8r8Bkw/nahid.jpg"
     }
 ]

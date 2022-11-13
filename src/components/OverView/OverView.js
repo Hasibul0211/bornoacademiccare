@@ -4,7 +4,8 @@ import PieChart from '../Shared/PieChart/PieChart';
 const OverView = () => {
     return (
         <div>
-            <section style={{ width: '100%', display: 'flex' }}>
+            {/* first cont section here */}
+            <section className='firstCont'>
                 {/* total student section here */}
                 <div className='pieChart'>
                     <PieChart></PieChart>

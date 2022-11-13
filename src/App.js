@@ -6,6 +6,7 @@ import Author from './components/Author/Author';
 import OverView from './components/OverView/OverView';
 import StudentDetails from './components/StudentDetails/StudentDetails';
 import AddStudent from './components/AddStudent/AddStudent';
+import Footer from './components/Shared/Footer/Footer';
 function App() {
   return (
     <div className="App">
@@ -21,6 +22,7 @@ function App() {
         </Route>
 
       </Routes>
+
     </div>
   );
 }

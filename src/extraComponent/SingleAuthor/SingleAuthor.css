@@ -17,19 +17,74 @@
     border-radius: 5px;
 }
 
+.imgBox img {
+    height: 100%;
+    width: 100%;
+}
+
+
 .infoBox {
     width: 60%;
+    text-align: center;
+    margin-top: 3%;
 
 }
 
+.authorName {
+    background-color: rgb(72, 255, 0);
+    font-size: 35px;
+    padding: 5px;
+    width: 80%;
+    margin: 10px auto;
+    border-radius: 15px 0 15px 0;
+}
+
+.authorPost {
+    background-color: rgb(72, 255, 0);
+    font-size: 20px;
+    padding: 5px;
+    width: 90%;
+    margin: 2px auto;
+    border-radius: 15px;
+}
+
+.authorCall {
+    background-color: rgb(72, 255, 0);
+    font-size: 20px;
+    padding: 5px;
+    width: 50%;
+    margin: 2px auto;
+    border-radius: 15px;
+}
+
+.authorEdu {
+    background-color: rgb(72, 255, 0);
+    font-size: 18px;
+    padding: 5px;
+    width: 80%;
+    margin: 2px auto;
+    border-radius: 15px;
+}
+
+
+
+
+
+
+
 .editBtn {
-    width: 10%;
+    width: 12%;
 }
 
 .editBtn button {
     height: 30px;
     width: 100%;
     font-weight: 600;
-    font-size: 13px;
+    font-size: 15px;
     cursor: pointer;
+    background-color: black;
+    border: none;
+    border-radius: 10px;
+    color: whitesmoke;
+    font-family: 'Times New Roman', Times, serif;
 }
