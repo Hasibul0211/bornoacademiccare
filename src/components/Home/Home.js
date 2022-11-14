@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import "./Home.css";
 import { Link, Outlet } from "react-router-dom";
 import logo from "../../photos/borno logo.png"
-import { HiUserGroup, HiInformationCircle } from "react-icons/hi";
+import { HiUserGroup } from "react-icons/hi";
 import { FaUserGraduate } from "react-icons/fa";
 import { RiPagesFill } from "react-icons/ri";
 import { MdOutlineRemoveRedEye } from "react-icons/md";
@@ -58,10 +58,13 @@ const Home = () => {
                                 fee &&
                                 <div>
                                     <li>
-                                        <Link to="student-details" style={{ textDecoration: 'none', color: 'white', fontSize: '17px', marginLeft: '20px' }}>Fees Record(Running)</Link>
+                                        <Link to="fees-record" style={{ textDecoration: 'none', color: 'white', fontSize: '17px', marginLeft: '20px' }}>Fees Record(Running)</Link>
                                     </li>
                                     <li>
-                                        <Link to="student-details" style={{ textDecoration: 'none', color: 'white', fontSize: '17px', marginLeft: '20px' }}>Previouse Fees Records</Link>
+                                        <Link to="past-record" style={{ textDecoration: 'none', color: 'white', fontSize: '17px', marginLeft: '20px' }}>Previouse Fees Records</Link>
+                                    </li>
+                                    <li>
+                                        <Link to="add-payment" style={{ textDecoration: 'none', color: 'white', fontSize: '17px', marginLeft: '20px' }}>Add Payment</Link>
                                     </li>
                                 </div>
                             }

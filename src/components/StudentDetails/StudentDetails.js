@@ -25,7 +25,7 @@ const StudentDetails = () => {
                     <option value="newest">Newest</option>
                 </select>
             </div>
-            <div style={{ width: '100%', height: '10px', backgroundColor: '#393E46' }}>
+            <div style={{ width: '100%', hBSc: '10px', backgroundColor: '#393E46' }}>
 
             </div>
 
@@ -37,6 +37,114 @@ const StudentDetails = () => {
                 <div style={{ width: '12%' }}><p>Status</p> </div>
                 <div style={{ width: '10%' }}><p>Edit</p> </div>
                 <div style={{ width: '10%' }}><p>Remove</p> </div>
+            </section>
+            <section className='studentData'>
+                <div style={{ width: '12%' }}><p>220801</p> </div>
+                <div style={{ width: '33%' }}><p>Hasibul</p> </div>
+                <div style={{ width: '10%' }}><p>BSc</p> </div>
+                <div style={{ width: '12%' }}><p>Click</p> </div>
+                <div style={{ width: '12%' }}><p>Running</p> </div>
+                <div style={{ width: '10%' }}><p>Edit</p> </div>
+                <div style={{ width: '10%' }}><p>Delete</p> </div>
+            </section>
+            <section className='studentData'>
+                <div style={{ width: '12%' }}><p>220801</p> </div>
+                <div style={{ width: '33%' }}><p>Hasibul</p> </div>
+                <div style={{ width: '10%' }}><p>BSc</p> </div>
+                <div style={{ width: '12%' }}><p>Click</p> </div>
+                <div style={{ width: '12%' }}><p>Running</p> </div>
+                <div style={{ width: '10%' }}><p>Edit</p> </div>
+                <div style={{ width: '10%' }}><p>Delete</p> </div>
+            </section>
+            <section className='studentData'>
+                <div style={{ width: '12%' }}><p>220801</p> </div>
+                <div style={{ width: '33%' }}><p>Hasibul</p> </div>
+                <div style={{ width: '10%' }}><p>BSc</p> </div>
+                <div style={{ width: '12%' }}><p>Click</p> </div>
+                <div style={{ width: '12%' }}><p>Running</p> </div>
+                <div style={{ width: '10%' }}><p>Edit</p> </div>
+                <div style={{ width: '10%' }}><p>Delete</p> </div>
+            </section>
+            <section className='studentData'>
+                <div style={{ width: '12%' }}><p>220801</p> </div>
+                <div style={{ width: '33%' }}><p>Hasibul</p> </div>
+                <div style={{ width: '10%' }}><p>BSc</p> </div>
+                <div style={{ width: '12%' }}><p>Click</p> </div>
+                <div style={{ width: '12%' }}><p>Running</p> </div>
+                <div style={{ width: '10%' }}><p>Edit</p> </div>
+                <div style={{ width: '10%' }}><p>Delete</p> </div>
+            </section>
+            <section className='studentData'>
+                <div style={{ width: '12%' }}><p>220801</p> </div>
+                <div style={{ width: '33%' }}><p>Hasibul</p> </div>
+                <div style={{ width: '10%' }}><p>BSc</p> </div>
+                <div style={{ width: '12%' }}><p>Click</p> </div>
+                <div style={{ width: '12%' }}><p>Running</p> </div>
+                <div style={{ width: '10%' }}><p>Edit</p> </div>
+                <div style={{ width: '10%' }}><p>Delete</p> </div>
+            </section>
+            <section className='studentData'>
+                <div style={{ width: '12%' }}><p>220801</p> </div>
+                <div style={{ width: '33%' }}><p>Hasibul</p> </div>
+                <div style={{ width: '10%' }}><p>BSc</p> </div>
+                <div style={{ width: '12%' }}><p>Click</p> </div>
+                <div style={{ width: '12%' }}><p>Running</p> </div>
+                <div style={{ width: '10%' }}><p>Edit</p> </div>
+                <div style={{ width: '10%' }}><p>Delete</p> </div>
+            </section>
+            <section className='studentData'>
+                <div style={{ width: '12%' }}><p>220801</p> </div>
+                <div style={{ width: '33%' }}><p>Hasibul</p> </div>
+                <div style={{ width: '10%' }}><p>BSc</p> </div>
+                <div style={{ width: '12%' }}><p>Click</p> </div>
+                <div style={{ width: '12%' }}><p>Running</p> </div>
+                <div style={{ width: '10%' }}><p>Edit</p> </div>
+                <div style={{ width: '10%' }}><p>Delete</p> </div>
+            </section>
+            <section className='studentData'>
+                <div style={{ width: '12%' }}><p>220801</p> </div>
+                <div style={{ width: '33%' }}><p>Hasibul</p> </div>
+                <div style={{ width: '10%' }}><p>BSc</p> </div>
+                <div style={{ width: '12%' }}><p>Click</p> </div>
+                <div style={{ width: '12%' }}><p>Running</p> </div>
+                <div style={{ width: '10%' }}><p>Edit</p> </div>
+                <div style={{ width: '10%' }}><p>Delete</p> </div>
+            </section>
+            <section className='studentData'>
+                <div style={{ width: '12%' }}><p>220801</p> </div>
+                <div style={{ width: '33%' }}><p>Hasibul</p> </div>
+                <div style={{ width: '10%' }}><p>BSc</p> </div>
+                <div style={{ width: '12%' }}><p>Click</p> </div>
+                <div style={{ width: '12%' }}><p>Running</p> </div>
+                <div style={{ width: '10%' }}><p>Edit</p> </div>
+                <div style={{ width: '10%' }}><p>Delete</p> </div>
+            </section>
+            <section className='studentData'>
+                <div style={{ width: '12%' }}><p>220801</p> </div>
+                <div style={{ width: '33%' }}><p>Hasibul</p> </div>
+                <div style={{ width: '10%' }}><p>BSc</p> </div>
+                <div style={{ width: '12%' }}><p>Click</p> </div>
+                <div style={{ width: '12%' }}><p>Running</p> </div>
+                <div style={{ width: '10%' }}><p>Edit</p> </div>
+                <div style={{ width: '10%' }}><p>Delete</p> </div>
+            </section>
+            <section className='studentData'>
+                <div style={{ width: '12%' }}><p>220801</p> </div>
+                <div style={{ width: '33%' }}><p>Hasibul</p> </div>
+                <div style={{ width: '10%' }}><p>BSc</p> </div>
+                <div style={{ width: '12%' }}><p>Click</p> </div>
+                <div style={{ width: '12%' }}><p>Running</p> </div>
+                <div style={{ width: '10%' }}><p>Edit</p> </div>
+                <div style={{ width: '10%' }}><p>Delete</p> </div>
+            </section>
+            <section className='studentData'>
+                <div style={{ width: '12%' }}><p>220801</p> </div>
+                <div style={{ width: '33%' }}><p>Hasibul</p> </div>
+                <div style={{ width: '10%' }}><p>BSc</p> </div>
+                <div style={{ width: '12%' }}><p>Click</p> </div>
+                <div style={{ width: '12%' }}><p>Running</p> </div>
+                <div style={{ width: '10%' }}><p>Edit</p> </div>
+                <div style={{ width: '10%' }}><p>Delete</p> </div>
             </section>
             {/* <div>
                 <img src={loading} alt="loading im" style={{ marginLeft: '25%' }} />

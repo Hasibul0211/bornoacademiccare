@@ -1,12 +1,14 @@
 import './App.css';
-import { Routes, Route, Link } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import Home from './components/Home/Home';
 import Login from './components/Login/Login';
 import Author from './components/Author/Author';
 import OverView from './components/OverView/OverView';
 import StudentDetails from './components/StudentDetails/StudentDetails';
 import AddStudent from './components/AddStudent/AddStudent';
-import Footer from './components/Shared/Footer/Footer';
+import FeesRecord from './components/FeesRecord/FeesRecord';
+import PastFees from './components/PastFees/PastFees';
+import AddPayment from './components/AddPayment/AddPayment';
 function App() {
   return (
     <div className="App">
@@ -19,6 +21,9 @@ function App() {
           {/* <Route path='overview' element={<OverView></OverView>}></Route> */}
           <Route path='student-details' element={<StudentDetails></StudentDetails>}></Route>
           <Route path='add-student-info' element={<AddStudent></AddStudent>}></Route>
+          <Route path='fees-record' element={<FeesRecord></FeesRecord>}></Route>
+          <Route path='past-record' element={<PastFees></PastFees>}></Route>
+          <Route path='add-payment' element={<AddPayment></AddPayment>}></Route>
         </Route>
 
       </Routes>

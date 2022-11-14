@@ -1,0 +1,71 @@
+.payTitle {
+    text-align: center;
+    margin-top: 5%;
+    background-color: green;
+    color: white;
+    font-weight: bold;
+    font-size: 22px;
+    letter-spacing: 10px;
+    text-transform: uppercase;
+}
+
+
+
+.paymentForm {
+    margin-left: 2%;
+}
+
+
+.idInputpay {
+    height: 30px;
+    border: 2px solid orange;
+    border-radius: 5px;
+}
+
+
+.nameInputpay {
+    height: 30px;
+    width: 85%;
+    border: 2px solid orange;
+    border-radius: 5px;
+}
+
+.sameLinePay {
+    display: flex;
+    justify-content: space-between;
+    padding-right: 4%;
+}
+
+.namerefInputpay {
+    width: 67%;
+    height: 30px;
+    border: 2px solid orange;
+    border-radius: 5px;
+}
+
+.paymentbtn {
+    width: 30%;
+    height: 80px;
+    margin: 20px auto;
+
+}
+
+.paymentbtn button {
+    height: 50px;
+    width: 100%;
+    border-radius: 10px;
+    border: 1px solid red;
+    background-color: green;
+    color: white;
+    font-size: 22px;
+    font-weight: 700;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    transition: all .5s;
+    cursor: pointer;
+
+}
+
+.paymentbtn button:hover {
+    background-color: red;
+    color: yellow;
+}

@@ -1,6 +1,5 @@
 import React from 'react';
 import './AddStudent.css'
-import loading from '../../photos/loading.gif'
 const AddStudent = () => {
 
 
@@ -95,7 +94,7 @@ const AddStudent = () => {
 
                     {/* submit button section here */}
                     <div className='submitBtn'>
-                        <button>submit</button>
+                        <button type='submit'>submit</button>
                     </div>
                     <hr />
                 </form>
