@@ -9,6 +9,7 @@ import AddStudent from './components/AddStudent/AddStudent';
 import FeesRecord from './components/FeesRecord/FeesRecord';
 import PastFees from './components/PastFees/PastFees';
 import AddPayment from './components/AddPayment/AddPayment';
+import DebitCredit from './components/DebitCredit/DebitCredit';
 function App() {
   return (
     <div className="App">
@@ -24,6 +25,7 @@ function App() {
           <Route path='fees-record' element={<FeesRecord></FeesRecord>}></Route>
           <Route path='past-record' element={<PastFees></PastFees>}></Route>
           <Route path='add-payment' element={<AddPayment></AddPayment>}></Route>
+          <Route path='debit-credit' element={<DebitCredit />}></Route>
         </Route>
 
       </Routes>

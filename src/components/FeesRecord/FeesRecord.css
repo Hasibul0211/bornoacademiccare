@@ -1,0 +1,15 @@
+.feesRecordHeader {
+    display: grid;
+    grid-template-columns: 15% 37% 16% 20% 12%;
+    background-color: #863A6F;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.feesRecordHeader div {
+    border: 1px solid white;
+    text-align: center;
+    font-weight: bold;
+    font-size: 15px;
+    color: white;
+}

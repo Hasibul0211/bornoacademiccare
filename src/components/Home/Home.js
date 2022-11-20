@@ -5,6 +5,7 @@ import logo from "../../photos/borno logo.png"
 import { HiUserGroup } from "react-icons/hi";
 import { FaUserGraduate } from "react-icons/fa";
 import { RiPagesFill } from "react-icons/ri";
+import { BiNotepad } from "react-icons/bi";
 import { MdOutlineRemoveRedEye } from "react-icons/md";
 import Footer from '../Shared/Footer/Footer';
 const Home = () => {
@@ -39,6 +40,9 @@ const Home = () => {
                             </li>
                             <li> <HiUserGroup className='icons' />
                                 <Link to="author" style={{ textDecoration: 'none', color: 'white' }}>Author</Link>
+                            </li>
+                            <li> <BiNotepad className='icons' />
+                                <Link to="debit-credit" style={{ textDecoration: 'none', color: 'white' }}>Debit/Credit</Link>
                             </li>
                             <li onClick={() => setStu(!stu)}> <FaUserGraduate className='icons' />Students</li>
                             {
