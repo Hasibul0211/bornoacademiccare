@@ -37,3 +37,56 @@
     padding: 0;
     margin: 0;
 }
+
+.amountHeader {
+    display: grid;
+    grid-template-columns: 13% 39% 12% 12% 12% 12%;
+}
+
+.amountHeader div {
+    border: 1px solid white;
+    background-color: black;
+    color: white;
+}
+
+.amountHeader div p {
+    margin: 0;
+    padding: 10px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.amountData {
+    display: grid;
+    grid-template-columns: 13% 39% 12% 12% 12% 12%;
+}
+
+.amountData div {
+    border: 1px solid white;
+    background-color: #404258;
+    color: white;
+}
+
+.amountData div p {
+    margin: 0;
+    padding: 10px;
+    text-align: center;
+    font-size: 15px;
+
+}
+
+.netamountBar {
+    position: fixed;
+    top: 11%;
+    right: 5%;
+    background-color: black;
+    color: white;
+    border-radius: 10px;
+}
+
+.netamountBar p {
+    margin: 0;
+    padding: 8px;
+    font-weight: bold;
+    font-size: 15px;
+}

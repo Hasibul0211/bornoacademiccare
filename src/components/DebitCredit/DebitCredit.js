@@ -54,6 +54,128 @@ const DebitCredit = () => {
                         dc ? <p>Debit Activate</p> : <p>Credit Activate</p>
                     }
                 </div>
+                <div className='netamountBar'>
+                    <p>Net Balance: 50000</p>
+
+                </div>
+            </section>
+
+            {/* data inserted filed */}
+            <section>
+                <div className='amountHeader'>
+                    <div><p>Date</p></div>
+                    <div><p>Specification</p></div>
+                    <div><p>Amount</p></div>
+                    <div><p>Debit</p></div>
+                    <div><p>Credit</p></div>
+                    <div><p>Net Balance</p></div>
+                </div>
+                <hr />
+                <hr />
+                <div className='amountData'>
+                    <div><p>22Nov,2022</p></div>
+                    <div><p>website build cost</p></div>
+                    <div><p>50000</p></div>
+                    <div><p>00</p></div>
+                    <div><p>50000</p></div>
+                    <div><p>50000</p></div>
+                </div>
+                <div className='amountData'>
+                    <div><p>22Nov,2022</p></div>
+                    <div><p>website build cost</p></div>
+                    <div><p>50000</p></div>
+                    <div><p>00</p></div>
+                    <div><p>50000</p></div>
+                    <div><p>50000</p></div>
+                </div>
+                <div className='amountData'>
+                    <div><p>22Nov,2022</p></div>
+                    <div><p>website build cost</p></div>
+                    <div><p>50000</p></div>
+                    <div><p>00</p></div>
+                    <div><p>50000</p></div>
+                    <div><p>50000</p></div>
+                </div>
+                <div className='amountData'>
+                    <div><p>22Nov,2022</p></div>
+                    <div><p>website build cost</p></div>
+                    <div><p>50000</p></div>
+                    <div><p>00</p></div>
+                    <div><p>50000</p></div>
+                    <div><p>50000</p></div>
+                </div>
+                <div className='amountData'>
+                    <div><p>22Nov,2022</p></div>
+                    <div><p>website build cost</p></div>
+                    <div><p>50000</p></div>
+                    <div><p>00</p></div>
+                    <div><p>50000</p></div>
+                    <div><p>50000</p></div>
+                </div>
+                <div className='amountData'>
+                    <div><p>22Nov,2022</p></div>
+                    <div><p>website build cost</p></div>
+                    <div><p>50000</p></div>
+                    <div><p>00</p></div>
+                    <div><p>50000</p></div>
+                    <div><p>50000</p></div>
+                </div>
+                <div className='amountData'>
+                    <div><p>22Nov,2022</p></div>
+                    <div><p>website build cost</p></div>
+                    <div><p>50000</p></div>
+                    <div><p>00</p></div>
+                    <div><p>50000</p></div>
+                    <div><p>50000</p></div>
+                </div>
+                <div className='amountData'>
+                    <div><p>22Nov,2022</p></div>
+                    <div><p>website build cost</p></div>
+                    <div><p>50000</p></div>
+                    <div><p>00</p></div>
+                    <div><p>50000</p></div>
+                    <div><p>50000</p></div>
+                </div>
+                <div className='amountData'>
+                    <div><p>22Nov,2022</p></div>
+                    <div><p>website build cost</p></div>
+                    <div><p>50000</p></div>
+                    <div><p>00</p></div>
+                    <div><p>50000</p></div>
+                    <div><p>50000</p></div>
+                </div>
+                <div className='amountData'>
+                    <div><p>22Nov,2022</p></div>
+                    <div><p>website build cost</p></div>
+                    <div><p>50000</p></div>
+                    <div><p>00</p></div>
+                    <div><p>50000</p></div>
+                    <div><p>50000</p></div>
+                </div>
+                <div className='amountData'>
+                    <div><p>22Nov,2022</p></div>
+                    <div><p>website build cost</p></div>
+                    <div><p>50000</p></div>
+                    <div><p>00</p></div>
+                    <div><p>50000</p></div>
+                    <div><p>50000</p></div>
+                </div>
+                <div className='amountData'>
+                    <div><p>22Nov,2022</p></div>
+                    <div><p>website build cost</p></div>
+                    <div><p>50000</p></div>
+                    <div><p>00</p></div>
+                    <div><p>50000</p></div>
+                    <div><p>50000</p></div>
+                </div>
+                <div className='amountData'>
+                    <div><p>22Nov,2022</p></div>
+                    <div><p>website build cost</p></div>
+                    <div><p>50000</p></div>
+                    <div><p>00</p></div>
+                    <div><p>50000</p></div>
+                    <div><p>50000</p></div>
+                </div>
             </section>
         </div>
     );

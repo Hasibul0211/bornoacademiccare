@@ -76,7 +76,6 @@ const Login = () => {
             email: regEmail,
             password: regPass
         }
-        console.log(user);
         alert('register button clicked')
 
         e.preventDefault()

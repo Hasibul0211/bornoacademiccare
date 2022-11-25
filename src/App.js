@@ -10,6 +10,7 @@ import FeesRecord from './components/FeesRecord/FeesRecord';
 import PastFees from './components/PastFees/PastFees';
 import AddPayment from './components/AddPayment/AddPayment';
 import DebitCredit from './components/DebitCredit/DebitCredit';
+import SeeAuthor from './components/Author/SeeAuthor/SeeAuthor';
 function App() {
   return (
     <div className="App">
@@ -19,6 +20,7 @@ function App() {
         <Route path='home/' element={<Home></Home>} >
           <Route index element={<OverView></OverView>} />
           <Route path='author' element={<Author></Author>}></Route>
+          <Route path='add-author' element={<SeeAuthor></SeeAuthor>}></Route>
           {/* <Route path='overview' element={<OverView></OverView>}></Route> */}
           <Route path='student-details' element={<StudentDetails></StudentDetails>}></Route>
           <Route path='add-student-info' element={<AddStudent></AddStudent>}></Route>
