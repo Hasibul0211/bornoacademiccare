@@ -46,10 +46,10 @@ const Home = () => {
                                 auth &&
                                 <div>
                                     <li>
-                                        <Link to="author" style={{ textDecoration: 'none', color: 'white', fontSize: '16px', marginLeft: '20px' }}>All Author</Link>
+                                        <Link to="author" style={{ textDecoration: 'none', color: 'white', fontSize: '15px', marginLeft: '20px' }}>All Author</Link>
                                     </li>
                                     <li>
-                                        <Link to="add-author" style={{ textDecoration: 'none', color: 'white', fontSize: '16px', marginLeft: '20px' }}>Add Author</Link>
+                                        <Link to="add-author" style={{ textDecoration: 'none', color: 'white', fontSize: '15px', marginLeft: '20px' }}>Add Author</Link>
                                     </li>
                                 </div>
 
@@ -67,10 +67,10 @@ const Home = () => {
                                 stu &&
                                 <div>
                                     <li>
-                                        <Link to="student-details" style={{ textDecoration: 'none', color: 'white', fontSize: '16px', marginLeft: '20px' }}>Student Details</Link>
+                                        <Link to="student-details" style={{ textDecoration: 'none', color: 'white', fontSize: '15px', marginLeft: '20px' }}>Student Details</Link>
                                     </li>
                                     <li>
-                                        <Link to="add-student-info" style={{ textDecoration: 'none', color: 'white', fontSize: '16px', marginLeft: '20px' }}>Add Student Details</Link>
+                                        <Link to="add-student-info" style={{ textDecoration: 'none', color: 'white', fontSize: '15px', marginLeft: '20px' }}>Add Student Details</Link>
                                     </li>
                                 </div>
 
@@ -80,13 +80,13 @@ const Home = () => {
                                 fee &&
                                 <div>
                                     <li>
-                                        <Link to="fees-record" style={{ textDecoration: 'none', color: 'white', fontSize: '16px', marginLeft: '20px' }}>Fees Record(Running)</Link>
+                                        <Link to="fees-record" style={{ textDecoration: 'none', color: 'white', fontSize: '15px', marginLeft: '20px' }}>Fees Record(Running)</Link>
                                     </li>
                                     <li>
-                                        <Link to="past-record" style={{ textDecoration: 'none', color: 'white', fontSize: '16px', marginLeft: '20px' }}>Previouse Fees Records</Link>
+                                        <Link to="past-record" style={{ textDecoration: 'none', color: 'white', fontSize: '15px', marginLeft: '20px' }}>Previouse Fees Records</Link>
                                     </li>
                                     <li>
-                                        <Link to="add-payment" style={{ textDecoration: 'none', color: 'white', fontSize: '16px', marginLeft: '20px' }}>Add Payment</Link>
+                                        <Link to="add-payment" style={{ textDecoration: 'none', color: 'white', fontSize: '15px', marginLeft: '20px' }}>Add Payment</Link>
                                     </li>
                                 </div>
                             }

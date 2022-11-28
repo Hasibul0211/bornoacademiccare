@@ -25,8 +25,10 @@ const style = {
 
 
 const SingleAuthor = (props) => {
-    const { name, position, contact, education, photo } = props.value
-
+    const { _id, name, post, number, qualification, img
+    } = props.value
+    const authorDataUi = props.data
+    const setAuthorDataUi = props.setData
 
     const [open, setOpen] = React.useState(false);
     const handleOpen = () => setOpen(true);
@@ -78,22 +80,42 @@ const SingleAuthor = (props) => {
     }
 
 
+    //delete button here
+
+    const handleDelete = (id) => {
+
+        fetch(`http://localhost:5000/add-author/${id}`, {
+            method: 'DELETE'
+        }).then(res => res.json())
+            .then(data => {
+                if (data.deletedCount > 0) {
+                    alert('deleted successfully')
+                    const remainAuthor = authorDataUi.filter(authUi => authUi._id !== id)
+                    setAuthorDataUi(remainAuthor)
+                    console.log(remainAuthor);
+
+                }
+            })
+    }
+
+
+
     return (
         <div>
             <div className='singleCard'>
                 <div className='imgBox'>
-                    <img src={photo} alt="img box" />
+                    <img src={img} alt="img box" />
                 </div>
                 <div className='infoBox'>
                     <h1 className='authorName'>{name}</h1>
-                    <h3 className='authorPost'><GrUserWorker />::{position}</h3>
-                    <h3 className='authorCall'><BiPhoneCall />:: {contact}</h3>
-                    <h3 className='authorEdu'><FaUserGraduate />:: {education}</h3>
+                    <h3 className='authorPost'><GrUserWorker />::{post}</h3>
+                    <h3 className='authorCall'><BiPhoneCall />:: {number}</h3>
+                    <h3 className='authorEdu'><FaUserGraduate />:: {qualification}</h3>
                     {/* <h3 style={{ color: 'white', margin: 0, fontSize: '15px' }}>Education Year: {year}</h3> */}
                 </div>
                 <div className='editBtn'>
                     <button onClick={handleOpen}>Edit Info</button>
-                    <button onClick={() => alert('delete button')} style={{ marginTop: '2px' }}>Delete</button>
+                    <button onClick={() => handleDelete(_id)} style={{ marginTop: '2px' }}>Delete</button>
                 </div>
 
 
@@ -130,22 +152,6 @@ const SingleAuthor = (props) => {
                         </Fade>
                     </Modal>
                 </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
             </div>
