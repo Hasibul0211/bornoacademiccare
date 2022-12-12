@@ -5,7 +5,7 @@ import SingleAuthor from '../../extraComponent/SingleAuthor/SingleAuthor';
 const Author = () => {
     const [data, setData] = useState()
     useEffect(() => {
-        fetch('http://localhost:5000/add-author')
+        fetch('https://bornoacademiccare.up.railway.app/add-author')
             .then(res => res.json())
             .then(data => setData(data))
     }, [])
