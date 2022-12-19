@@ -34,7 +34,7 @@ const SeeAuthor = () => {
             img: aimage
         }
 
-        fetch('https://bornoacademiccare.up.railway.app/npmadd-author', {
+        fetch('https://bornoacademiccare.up.railway.app/add-author', {
             method: 'POST',
             headers: {
                 'content-type': 'Application/json'

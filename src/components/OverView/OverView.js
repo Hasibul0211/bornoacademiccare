@@ -7,11 +7,12 @@ const OverView = () => {
             {/* first cont section here */}
             <section className='firstCont'>
                 {/* total student section here */}
-                <div className='pieChart'>
-                    <PieChart></PieChart>
+                <div className=''>
+                    {/* <PieChart></PieChart> */}
+                    <h3>Running Total Students</h3>
                 </div>
                 <div className='TsCountD'>
-                    <h3>Running Total Students</h3>
+
                     <h1>21</h1>
                 </div>
 

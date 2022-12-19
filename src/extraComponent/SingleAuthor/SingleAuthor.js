@@ -84,7 +84,7 @@ const SingleAuthor = (props) => {
 
     const handleDelete = (id) => {
 
-        fetch(`http://localhost:5000/add-author/${id}`, {
+        fetch(`https://bornoacademiccare.up.railway.app/add-author/${id}`, {
             method: 'DELETE'
         }).then(res => res.json())
             .then(data => {
