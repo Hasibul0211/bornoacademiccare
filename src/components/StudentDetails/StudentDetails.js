@@ -18,6 +18,25 @@ const StudentDetails = () => {
 
 
 
+
+    const studentDetailsBtn = (id) => {
+
+        // console.log('student id', id);
+        fetch(`https://bornoacademiccare.up.railway.app/add-student/${id}`, {
+            method: 'DELETE'
+        }).then(res => res.json())
+            .then(data => {
+
+                if (data.deletedCount > 0) {
+
+                    alert('deleted successfully')
+                    const remainStDetails = studentDetails.filter(studentDetail => studentDetail._id !== id)
+                    setStudentDetails(remainStDetails)
+                    // console.log(remainDc);
+
+                }
+            })
+    }
     return (
         <div className='container'>
 
@@ -56,7 +75,7 @@ const StudentDetails = () => {
                         <div style={{ width: '15%' }}><p>{studentDet.gurdianMobile}</p> </div>
                         <div style={{ width: '12%' }} onClick={() => alert('view cliked')}><p className="viewPart">View</p> </div>
                         <div style={{ width: '10%' }} onClick={() => alert('edit cliked')}><p className="viewPart">Edit</p> </div>
-                        <div style={{ width: '10%' }} onClick={() => alert('delete cliked')}><p className="viewPart">Delete</p> </div>
+                        <div style={{ width: '10%' }}><p className="viewPart" onClick={() => studentDetailsBtn(studentDet._id)}>Delete</p> </div>
                     </section>
                 )
             }

@@ -109,8 +109,32 @@ const DebitCredit = () => {
             .then(data => setDcDatas(data))
     }, [])
 
-    dcDatas.map(dcData => console.log(dcData))
+    // dcDatas.map(dcData => console.log(dcData))
 
+
+    const handleDcDeleteBtn = (id) => {
+        console.log('data id is', id);
+        fetch(`https://bornoacademiccare.up.railway.app/debit-credit/${id}`, {
+            method: 'DELETE'
+        }).then(res => res.json())
+            .then(data => {
+                if (data.deletedCount > 0) {
+                    alert('deleted successfully')
+                    const remainDc = dcDatas.filter(dcDa => dcDa._id !== id)
+                    setDcDatas(remainDc)
+                    // console.log(remainDc);
+
+                }
+            })
+    }
+
+
+    const [dcTotal, setdcTotal] = useState()
+
+    useEffect(() => {
+        dcDatas.map(dcD => setdcTotal(dcD?.totalAmount))
+        console.log('get dc total', dcTotal);
+    }, [dcDatas])
 
 
     return (
@@ -179,7 +203,7 @@ const DebitCredit = () => {
                     }
                 </div>
                 <div className='netamountBar'>
-                    <p>Net Balance: 50000</p>
+                    <p>Net Balance: {dcTotal} </p>
 
                 </div>
             </section>
@@ -208,9 +232,10 @@ const DebitCredit = () => {
                         <div><p>{dcData.status === "credit" ? dcData.amounts : "00"}</p></div>
 
                         <div><p>{dcData.totalAmount}</p></div>
-                        <div onClick={() => alert('delete button')}><p style={{ backgroundColor: 'black', borderRadius: '22px', margin: '8px 4px 0 4px', padding: '4px', cursor: 'pointer' }}>Delete</p></div>
+                        <div onClick={() => handleDcDeleteBtn(dcData._id)}><p style={{ backgroundColor: 'black', borderRadius: '22px', margin: '8px 4px 0 4px', padding: '4px', cursor: 'pointer' }}>Delete</p></div>
                     </div>)
                 }
+
             </section>
         </div>
     );

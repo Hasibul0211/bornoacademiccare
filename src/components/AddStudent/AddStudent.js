@@ -18,6 +18,8 @@ const AddStudent = () => {
     const [admissionDate, setAdmissionDate] = useState('')
     const [birthDate, setBirthDate] = useState('')
 
+    const [tuitionFees, setTuitionFees] = useState('')
+
 
     // student info collectl 
     const name = useRef()
@@ -34,6 +36,7 @@ const AddStudent = () => {
     const gurdianMobile = useRef()
     const dateValue = useRef()
     const birthValue = useRef()
+    const tuitionFee = useRef()
 
     const handleOnChangeStudent = () => {
         setStuName(name.current.value);
@@ -50,6 +53,7 @@ const AddStudent = () => {
         setStuGurdianMob(gurdianMobile.current.value);
         setAdmissionDate(dateValue.current.value);
         setBirthDate(birthValue.current.value);
+        setTuitionFees(tuitionFee.current.value);
 
 
     }
@@ -73,7 +77,8 @@ const AddStudent = () => {
             gurdian: stuGurdian,
             gurdianMobile: stuGurdianMob,
             admissionDate: admissionDate,
-            birthDate: birthDate
+            birthDate: birthDate,
+            tuitionFees: tuitionFees
 
         }
 
@@ -89,13 +94,6 @@ const AddStudent = () => {
                     alert('student info added successfully')
                 }
             })
-
-
-
-
-
-
-
 
         console.log(studentDetails);
         e.preventDefault()
@@ -122,6 +120,9 @@ const AddStudent = () => {
                     <div className='sameLine'>
                         <div style={{ display: 'flex', justifyContent: 'start', alignItems: 'center' }}>
                             <p style={{ fontWeight: '600', backgroundColor: 'orange', border: '2px solid orange', padding: '4px', borderRadius: '5px 0 5px 0' }}>Student Id:</p><input type="number" className='idInput' placeholder='Please Enter Id' style={{ marginLeft: '-4px' }} ref={id} onChange={handleOnChangeStudent} />
+                        </div>
+                        <div style={{ display: 'flex', justifyContent: 'start', alignItems: 'center' }}>
+                            <p style={{ fontWeight: '600', backgroundColor: 'orange', border: '2px solid orange', padding: '4px', borderRadius: '5px 0 5px 0' }}>Tution Fee:</p><input type="number" className='idInput' placeholder='Please Enter amount' style={{ marginLeft: '-4px' }} ref={tuitionFee} onChange={handleOnChangeStudent} />
                         </div>
                         <div style={{ display: 'flex', justifyContent: 'start', alignItems: 'center' }}>
                             <p style={{ marginLeft: '10px', fontWeight: '600', backgroundColor: 'orange', border: '2px solid orange', padding: '4px', borderRadius: '5px 0 5px 0' }}>Date of Admission:</p><input type="date" className='idInput' style={{ marginLeft: '-4px', height: '32px' }} ref={dateValue} onChange={handleOnChangeStudent} />
