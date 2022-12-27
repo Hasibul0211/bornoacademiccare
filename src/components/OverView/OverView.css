@@ -1,60 +1,60 @@
-.firstCont {
-    display: grid;
-    grid-template-columns: 65% 35%;
-    width: 90%;
-    margin: 3% auto;
-
+.dashTop {
+    height: 120px;
+    width: 98%;
+    margin: 15px auto;
+    border: none;
+    border-radius: 10px;
+    background-color: #4FC3FA;
+    box-shadow: 1px 1px 1px 1px rgb(231, 211, 211);
 }
 
-.firstCont div {
-    height: 80px;
-    width: 95%;
-}
-
-.TsCountD {
-    height: 100%;
-    margin: 1%;
-    border: 1px solid rgb(99, 192, 11);
-    text-align: center;
-    border-radius: 5px;
-    background-color: black;
-    color: white;
-    box-shadow: 1px 1px 36px 2px rgb(191, 191, 218);
-}
-
-
-.TsCountD h1 {
-    font-size: 25px;
+.dashTop h3 {
+    padding-top: 25px;
+    padding-left: 10px;
     font-weight: bold;
-    margin: 3% 10%;
-    height: 60%;
-    background-color: aliceblue;
-    color: black;
-    border-radius: 10px;
-    padding-top: 3%;
+    font-size: 30px;
+    text-transform: capitalize;
+    margin: 0;
 
 }
 
-
-.TsCountT {
-    border: 1px solid rgb(204, 11, 11);
-    margin: 1%;
-    text-align: center;
-    border-radius: 10px;
-    background-color: black;
-    color: black;
-    box-shadow: 1px 1px 36px 2px rgb(191, 191, 218);
+.dashTop p {
+    padding-left: 20px;
+    font-weight: 600;
+    text-transform: capitalize;
 }
 
-.TsCountT h3 {
-    margin: 2% 10%;
-    font-size: 20px;
-    font-family: 'Times New Roman', Times, serif;
-    background-color: aliceblue;
-    height: 50%;
+.stuOverview {
+    width: 94%;
+    min-height: 100px;
+    background-color: white;
+    margin: 10px auto;
     border-radius: 10px;
-    padding-top: 3%;
+    padding: 8px;
+    box-sizing: border-box;
 }
+
+.stuOverview h3 {
+    margin: 0;
+    text-transform: capitalize;
+    padding: 8px;
+}
+
+.stuOveDiv {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-gap: 5px;
+}
+
+.stuOveDiv div {
+    box-sizing: border-box;
+    background-color: #F0F2F5;
+    width: 95%;
+    margin: 0 auto;
+    border-radius: 10px;
+    padding: 5px 10px;
+}
+
 
 /* 
 

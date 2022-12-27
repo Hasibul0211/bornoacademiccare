@@ -11,6 +11,7 @@ import PastFees from './components/PastFees/PastFees';
 import AddPayment from './components/AddPayment/AddPayment';
 import DebitCredit from './components/DebitCredit/DebitCredit';
 import SeeAuthor from './components/Author/SeeAuthor/SeeAuthor';
+import SingleStudent from './extraComponent/SingleStudent/SingleStudent';
 function App() {
   return (
     <div className="App">
@@ -29,6 +30,7 @@ function App() {
           <Route path='add-payment' element={<AddPayment></AddPayment>}></Route>
           <Route path='debit-credit' element={<DebitCredit />}></Route>
         </Route>
+        <Route path='student-single-detail/:id' element={<SingleStudent />}></Route>
 
       </Routes>
 

@@ -21,7 +21,7 @@ const Home = () => {
 
 
     return (
-        <div>
+        <div style={{ backgroundColor: '#F0F2F5' }}>
             <div className='heading'>
 
                 <h2>Borno Academic Care</h2>

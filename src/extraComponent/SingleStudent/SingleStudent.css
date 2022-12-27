@@ -1,0 +1,168 @@
+.stuDetails {
+
+    display: grid;
+    width: 85%;
+    margin: 1% auto 0 auto;
+    background-color: white;
+    box-shadow: 1px 1px 1px 1px rgb(143, 114, 114);
+    border-radius: 10px;
+    padding-bottom: 2%;
+}
+
+
+.stuDetail {
+
+    display: grid;
+    grid-template-columns: 25% 65% 10%;
+    padding: 10px 10px 5px 10px;
+
+}
+
+.stuImg {
+    width: 60%;
+    margin: 0 auto;
+    height: 200px;
+    box-shadow: 1px 1px 1px 2px gray;
+    border-radius: 5px;
+}
+
+
+
+.stuDetail div {
+
+    border-radius: 5px;
+}
+
+.stuheading {
+    display: flex;
+    background-color: #153462;
+    justify-content: space-around;
+    align-items: center;
+    position: sticky;
+    top: 0%;
+}
+
+.stuheading h2 {
+    color: white;
+    font-size: 30px;
+}
+
+.stuName {
+    margin: 0;
+    color: black;
+    padding-left: 8px;
+    padding-top: 5px;
+
+}
+
+.stuFaName {
+    margin: 0;
+    padding-left: 8px;
+    padding-top: 8px;
+    font-weight: 600;
+}
+
+.stuId {
+    margin: 0;
+    padding-left: 8px;
+    background-color: blueviolet;
+    width: 170px;
+    margin-top: 5px;
+    margin-left: 5px;
+    border-radius: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    font-weight: 500;
+    font-size: 16px;
+    color: white;
+}
+
+.stuDate {
+    margin: 0;
+    padding-left: 8px;
+    background-color: rgb(47, 80, 21);
+    width: 250px;
+    margin-top: 5px;
+    margin-left: 5px;
+    border-radius: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    font-weight: 500;
+    font-size: 16px;
+    color: white;
+}
+
+.stuFaMob {
+    font-size: 15px;
+    font-weight: 500;
+    padding-left: 8px;
+    margin: 0;
+}
+
+.stuClass {
+    margin: 0;
+    padding-left: 8px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    color: red;
+    font-size: 22px;
+    font-weight: 700;
+
+}
+
+.stuAGe {
+    margin: 0;
+    padding-left: 8px;
+    font-weight: 500;
+    font-size: 16px;
+}
+
+.stuScl {
+    margin: 0;
+    padding-left: 8px;
+    font-weight: 600;
+    padding-top: 5px;
+}
+
+.stuAdd {
+    margin: 0;
+    padding-left: 8px;
+    padding-top: 5px;
+    padding-bottom: 20px;
+    font-weight: 700;
+}
+
+.btnContain {
+    margin: 0 0 0 10px;
+}
+
+.btnContain button {
+    padding: 5px;
+    cursor: pointer;
+    width: 100px;
+    height: 40px;
+    margin: 2px;
+    background-color: orangered;
+    border: none;
+    border-radius: 5px;
+    color: white;
+
+
+}
+
+.stuFee {
+    margin: 0 0 10px 0;
+    padding-left: 8px;
+    font-size: 25px;
+    font-weight: 800;
+    color: orangered;
+}
+
+.studentAcademicData {
+    width: 85%;
+    margin: 1% auto 0 auto;
+    background-color: white;
+    box-shadow: 1px 1px 1px 1px rgb(143, 114, 114);
+    border-radius: 10px;
+    padding-bottom: 2%;
+}
