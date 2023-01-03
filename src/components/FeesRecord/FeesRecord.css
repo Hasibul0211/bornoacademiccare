@@ -1,6 +1,6 @@
 .feesRecordHeader {
     display: grid;
-    grid-template-columns: 15% 37% 16% 20% 12%;
+    grid-template-columns: 12% 32% 16% 20% 12% 8%;
     background-color: #863A6F;
     width: 90%;
     margin: 0 auto;
