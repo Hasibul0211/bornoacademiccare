@@ -13,3 +13,22 @@
     font-size: 15px;
     color: white;
 }
+
+.monthSection {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+
+.monthNameDesign {
+    width: 400px;
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    height: 42px;
+    text-align: center;
+    margin: 0 auto;
+    text-transform: capitalize;
+    padding-top: 5px;
+    border-radius: 10px;
+    border: 1px solid;
+}

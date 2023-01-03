@@ -69,6 +69,20 @@ const StudentDetails = () => {
     }
 
 
+    // sent to fees section 
+    const sentToFeeBtn = () => {
+        const month = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+
+        const d = new Date()
+        let monthName = month[d.getMonth()]
+
+        const fees = {
+            month: monthName,
+            fees: 5000
+        }
+        console.log(fees);
+    }
+
     return (
         <div className='container'>
 
@@ -96,6 +110,7 @@ const StudentDetails = () => {
                 <div style={{ width: '12%' }}><p>Details</p> </div>
                 <div style={{ width: '10%' }}><p>Edit</p> </div>
                 <div style={{ width: '10%' }}><p>Delete</p> </div>
+                <div style={{ width: '10%' }}><p>To Fees</p> </div>
             </section>
 
             {
@@ -110,6 +125,7 @@ const StudentDetails = () => {
                         </p> </div>
                         <div style={{ width: '10%' }} onClick={handleOpen}><p className="viewPart">Edit</p> </div>
                         <div style={{ width: '10%' }}><p className="viewPart" onClick={() => studentDetailsBtn(studentDet._id)}>Delete</p> </div>
+                        <div style={{ width: '10%' }}><p className="viewPart" onClick={sentToFeeBtn}>Undone</p> </div>
                         <div>
                             <Modal
                                 aria-labelledby="transition-modal-title"
