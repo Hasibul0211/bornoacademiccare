@@ -108,7 +108,9 @@ const StudentDetails = () => {
             body: JSON.stringify(studentDetail)
         }).then(res => res.json())
             .then(data => {
-                // setStat('done')
+                if (data.insertedId) {
+                    alert('Successfully send', newData.name, 'payment info')
+                }
             })
 
 
@@ -118,18 +120,18 @@ const StudentDetails = () => {
 
     }
 
-    const [feesGet, setFeesGet] = useState()
-    useEffect(() => {
-        fetch('https://bornoacademiccare.up.railway.app/fees')
-            .then(res => res.json())
-            .then(data => {
-                data.map(dat => setFeesGet(dat.studentId))
-            })
+    // const [feesGet, setFeesGet] = useState()
+    // useEffect(() => {
+    //     fetch('https://bornoacademiccare.up.railway.app/fees')
+    //         .then(res => res.json())
+    //         .then(data => {
+    //             data.map(dat => setFeesGet(dat.studentId))
+    //         })
 
-        if (feesGet === studentDetails.studentId) {
-            console.log('peeyesi');
-        }
-    }, [])
+    //     if (feesGet === studentDetails.studentId) {
+    //         console.log('peeyesi');
+    //     }
+    // }, [])
 
 
 
