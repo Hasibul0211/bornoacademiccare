@@ -27,10 +27,18 @@ const StudentDetails = () => {
     const handleClose = () => setOpen(false);
     const [selectValue, setSelectValue] = useState('')
     const [studentDetails, setStudentDetails] = useState([])
+
+
+
     const onChangeHandle = (e) => {
         const selectorValue = e.target.value;
-        setSelectValue(selectorValue)
+        console.log(selectorValue);
+
     }
+
+
+
+
 
 
     useEffect(() => {
@@ -69,33 +77,79 @@ const StudentDetails = () => {
     }
 
 
-    // sent to fees section 
-    const sentToFeeBtn = () => {
+    // sent to fees section
+
+    const [stat, setStat] = useState('undones')
+
+    const sentToFeeBtn = (id) => {
         const month = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
-
         const d = new Date()
-        let monthName = month[d.getMonth()]
+        let monthName = month[d.getMonth()];
 
-        const fees = {
+
+        const newData = studentDetails.find(studentData => studentData._id === id)
+
+        setStat('done')
+
+        const studentDetail = {
+            name: newData.name,
+            studentId: newData.studentId,
+            class: newData.class,
             month: monthName,
-            fees: 5000
+            fees: newData.tuitionFees,
+            feesStatus: 'Unpaid'
         }
-        console.log(fees);
+
+        fetch('https://bornoacademiccare.up.railway.app/fees', {
+            method: 'POST',
+            headers: {
+                'content-type': 'Application/json'
+            },
+            body: JSON.stringify(studentDetail)
+        }).then(res => res.json())
+            .then(data => {
+                // setStat('done')
+            })
+
+
+
+        console.log(stat);
+
+
     }
+
+    const [feesGet, setFeesGet] = useState()
+    useEffect(() => {
+        fetch('https://bornoacademiccare.up.railway.app/fees')
+            .then(res => res.json())
+            .then(data => {
+                data.map(dat => setFeesGet(dat.studentId))
+            })
+
+        if (feesGet === studentDetails.studentId) {
+            console.log('peeyesi');
+        }
+    }, [])
+
+
+
 
     return (
         <div className='container'>
 
             <div className='shortSection'>
 
-                <p>short details by:</p>
+                <p>short details by Class:</p>
                 <select name='select' onChange={(e) => onChangeHandle(e)}>
-                    <option selected value="name">Name</option>
-                    <option value="id">Id</option>
-                    <option value="class">Class</option>
-                    <option value="date">Date</option>
-                    <option value="oldest">Oldest</option>
-                    <option value="newest">Newest</option>
+                    <option selected value="four">Four</option>
+                    <option selected value="five">Five</option>
+                    <option value="six">Six</option>
+                    <option value="seven">Seven</option>
+                    <option value="eight">Eight</option>
+                    <option value="nine">Nine</option>
+                    <option value="ten">Ten</option>
+                    <option value="eleven">Eleven</option>
+                    <option value="twelve">Twelve</option>
                 </select>
             </div>
             <div style={{ width: '100%', hBSc: '10px', backgroundColor: '#393E46' }}>
@@ -125,7 +179,14 @@ const StudentDetails = () => {
                         </p> </div>
                         <div style={{ width: '10%' }} onClick={handleOpen}><p className="viewPart">Edit</p> </div>
                         <div style={{ width: '10%' }}><p className="viewPart" onClick={() => studentDetailsBtn(studentDet._id)}>Delete</p> </div>
-                        <div style={{ width: '10%' }}><p className="viewPart" onClick={sentToFeeBtn}>Undone</p> </div>
+
+
+                        <div style={{ width: '10%' }}>
+
+                            <p className="viewPart" onClick={() => sentToFeeBtn(studentDet._id)}>Send</p>
+
+
+                        </div>
                         <div>
                             <Modal
                                 aria-labelledby="transition-modal-title"

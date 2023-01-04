@@ -71,7 +71,7 @@ const FeesRecord = () => {
 
     const [feesRecordDatas, setFeesRecordDatas] = useState([])
     useEffect(() => {
-        fetch('https://bornoacademiccare.up.railway.app/fees-record')
+        fetch('https://bornoacademiccare.up.railway.app/fees')
             .then(res => res.json())
             .then(data => setFeesRecordDatas(data))
     }, [])
@@ -84,7 +84,7 @@ const FeesRecord = () => {
     }
     const removeFeesRecordBtn = (id) => {
 
-        fetch(`https://bornoacademiccare.up.railway.app/fees-record/${id}`, {
+        fetch(`https://bornoacademiccare.up.railway.app/fees/${id}`, {
             method: 'DELETE',
         })
             .then(res => res.json())
@@ -190,9 +190,7 @@ const FeesRecord = () => {
                 </Modal>
                 <div className='monthNameDesign'><p style={{ margin: '0', fontSize: '25px' }}>{getMonthV}</p></div>
             </section>
-            <section>
-                <button onClick={allRecordsBtn}>get all records</button>
-            </section>
+
 
             <section className='feesRecordHeader'>
                 <div><p>Id</p></div>
@@ -209,8 +207,8 @@ const FeesRecord = () => {
                     <div><p>{feesRecordData.id}</p></div>
                     <div><p>{feesRecordData.name}</p></div>
                     <div><p>{feesRecordData.class}</p></div>
-                    <div><p>{feesRecordData.tuitionFees}</p></div>
-                    <div><p>{feesRecordData.paymentStatus}</p></div>
+                    <div><p>{feesRecordData.fees}</p></div>
+                    <div><p>{feesRecordData.feesStatus}</p></div>
                     <div><p onClick={() => removeFeesRecordBtn(feesRecordData._id)}>Remove</p></div>
                 </section>)
             }
