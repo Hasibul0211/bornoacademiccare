@@ -1,18 +1,60 @@
 .feesRecordHeader {
     display: grid;
     grid-template-columns: 12% 32% 16% 20% 12% 8%;
-    background-color: #863A6F;
+    background-color: #153462;
     width: 90%;
     margin: 0 auto;
+    height: 45px;
 }
 
 .feesRecordHeader div {
-    border: 1px solid white;
+    border-right: 1px solid white;
     text-align: center;
     font-weight: bold;
     font-size: 15px;
     color: white;
 }
+
+.feesRecordsData {
+    display: grid;
+    grid-template-columns: 12% 32% 16% 20% 12% 8%;
+    background-color: #a088df;
+    width: 90%;
+    margin: 0 auto 1px auto;
+    height: 45px;
+    color: black;
+    text-align: center;
+
+}
+
+.feesRecordsData div {
+    border-right: 1px solid white;
+}
+
+.feesRecordsData div p {
+    margin: 0;
+    padding-top: 10px;
+    font-size: 15px;
+    font-weight: 600;
+    text-transform: capitalize;
+}
+
+
+.feesDelete {
+    cursor: pointer;
+    width: 99%;
+}
+
+.feesDelete:hover {
+    background-color: #153462;
+    margin-top: 0;
+    color: white;
+    border-radius: 10px;
+}
+
+
+
+
 
 .monthSection {
     display: flex;

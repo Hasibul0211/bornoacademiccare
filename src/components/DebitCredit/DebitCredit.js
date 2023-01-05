@@ -1,7 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import { useRef } from 'react';
+import { AiFillDelete } from 'react-icons/ai';
 import './DebitCredit.css'
-const DebitCredit = () => {
+
+
+const DebitCredit = ({ dcTotal, setdcTotal }) => {
     const [dc, setDc] = useState(true)
 
     const useDebit = () => {
@@ -31,10 +34,12 @@ const DebitCredit = () => {
         // console.log("debit value", debitAmount.current?.value);
         // console.log("credit value", creditAmount.current?.value);
     }
-
+    function refreshPage() {
+        window.location.reload(false);
+    }
 
     const debitCliked = (e) => {
-        alert('debit button clicked')
+
         const debitDetails = {
             date: dateF,
             specification: specificationF,
@@ -52,19 +57,15 @@ const DebitCredit = () => {
         }).then(res => res.json())
             .then(data => {
                 if (data.insertedId) {
-                    alert('Debit amount added successfully')
+
                     refreshPage();
                 }
             })
-        console.log(debitDetails);
+
     }
 
 
-
-
-
     const creditCliked = (e) => {
-        alert('credit button clicked')
 
         const creditDetails = {
             date: dateF,
@@ -81,19 +82,17 @@ const DebitCredit = () => {
         }).then(res => res.json())
             .then(data => {
                 if (data.insertedId) {
-                    alert('Credit amount added successfully')
+
                     refreshPage();
                 }
             })
 
-        console.log(creditDetails);
+
         e.preventDefault();
 
     }
 
-    function refreshPage() {
-        window.location.reload(false);
-    }
+
 
     // if (data.data.deletedCount > 0) {
     //     toast(data.message);
@@ -109,17 +108,16 @@ const DebitCredit = () => {
             .then(data => setDcDatas(data))
     }, [])
 
-    // dcDatas.map(dcData => console.log(dcData))
 
 
     const handleDcDeleteBtn = (id) => {
-        console.log('data id is', id);
+
         fetch(`https://bornoacademiccare.up.railway.app/debit-credit/${id}`, {
             method: 'DELETE'
         }).then(res => res.json())
             .then(data => {
                 if (data.deletedCount > 0) {
-                    alert('deleted successfully')
+
                     const remainDc = dcDatas.filter(dcDa => dcDa._id !== id)
                     setDcDatas(remainDc)
                     // console.log(remainDc);
@@ -129,7 +127,7 @@ const DebitCredit = () => {
     }
 
 
-    const [dcTotal, setdcTotal] = useState()
+    // const [dcTotal, setdcTotal] = useState()
 
     useEffect(() => {
         dcDatas.map(dcD => setdcTotal(dcD?.totalAmount))
@@ -227,12 +225,12 @@ const DebitCredit = () => {
                     dcDatas.map(dcData => <div className='amountData'>
                         <div><p>{dcData.date}</p></div>
                         <div><p>{dcData.specification}</p></div>
-                        <div><p>{dcData.amounts}</p></div>
-                        <div><p>{dcData.status === "debit" ? dcData.amounts : "00"}</p></div>
-                        <div><p>{dcData.status === "credit" ? dcData.amounts : "00"}</p></div>
+                        <div><p>{dcData.amounts} Tk</p></div>
+                        <div><p>{dcData.status === "debit" ? dcData.amounts : "00"} Tk</p></div>
+                        <div><p>{dcData.status === "credit" ? dcData.amounts : "00"} Tk</p></div>
 
-                        <div><p>{dcData.totalAmount}</p></div>
-                        <div onClick={() => handleDcDeleteBtn(dcData._id)}><p style={{ backgroundColor: 'black', borderRadius: '22px', margin: '8px 4px 0 4px', padding: '4px', cursor: 'pointer' }}>Delete</p></div>
+                        <div><p>{dcData.totalAmount} Tk</p></div>
+                        <div onClick={() => handleDcDeleteBtn(dcData._id)} className="deletePart"><p><AiFillDelete></AiFillDelete></p></div>
                     </div>)
                 }
 

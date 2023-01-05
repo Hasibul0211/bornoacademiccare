@@ -2,6 +2,8 @@ import React, { useEffect, useState } from 'react';
 import './FeesRecord.css';
 import { AiOutlinePlus } from "react-icons/ai";
 import { AiFillDelete } from "react-icons/ai";
+import { ImCross } from "react-icons/im";
+import { MdFileDownloadDone } from "react-icons/md";
 import { Backdrop, Fade, Modal, Typography } from '@mui/material';
 import { Box } from '@mui/system';
 import { useRef } from 'react';
@@ -115,7 +117,7 @@ const FeesRecord = () => {
     const enterMonthName = (e) => {
         const newMonth = { month: getMonth }
         console.log(newMonth);
-        fetch('http://localhost:5000/month', {
+        fetch('https://bornoacademiccare.up.railway.app/month', {
             method: 'POST',
             headers: {
                 'content-type': 'Application/json'
@@ -132,7 +134,7 @@ const FeesRecord = () => {
 
     const [getMonthV, setGetMonthV] = useState([])
     useEffect(() => {
-        fetch('http://localhost:5000/month')
+        fetch('https://bornoacademiccare.up.railway.app/month')
             .then(res => res.json())
             .then(data => setGetMonthV(data[0].month))
     }, [])
@@ -143,7 +145,7 @@ const FeesRecord = () => {
         window.location.reload(false);
     }
     const monthDeleteBtn = () => {
-        fetch('http://localhost:5000/month', {
+        fetch('https://bornoacademiccare.up.railway.app/month', {
             method: 'DELETE'
         })
 
@@ -182,7 +184,7 @@ const FeesRecord = () => {
                                     <input type="text" onChange={onChangeMonth} ref={monthName} /><br />
                                     <button type="submit" onClick={handleClose}>Done</button>
                                 </form>
-                                <button>close</button>
+                                <button onClick={handleClose}>Close</button>
                             </Typography>
 
                         </Box>
@@ -203,13 +205,16 @@ const FeesRecord = () => {
 
             {/* fees data  */}
             {
-                feesRecordDatas.map(feesRecordData => <section className='feesRecordHeader'>
-                    <div><p>{feesRecordData.id}</p></div>
+                feesRecordDatas.map(feesRecordData => <section className='feesRecordsData'>
+                    <div><p>{feesRecordData.studentId}</p></div>
                     <div><p>{feesRecordData.name}</p></div>
                     <div><p>{feesRecordData.class}</p></div>
-                    <div><p>{feesRecordData.fees}</p></div>
-                    <div><p>{feesRecordData.feesStatus}</p></div>
-                    <div><p onClick={() => removeFeesRecordBtn(feesRecordData._id)}>Remove</p></div>
+                    <div><p>{feesRecordData.fees} Tk</p></div>
+                    {
+                        feesRecordData.feesStatus ? <div><p><ImCross></ImCross></p></div> : <div><p><MdFileDownloadDone></MdFileDownloadDone></p></div>
+                    }
+
+                    <div className="feesDelete" title='Delete Now'><p onClick={() => removeFeesRecordBtn(feesRecordData._id)}><AiFillDelete></AiFillDelete></p></div>
                 </section>)
             }
 

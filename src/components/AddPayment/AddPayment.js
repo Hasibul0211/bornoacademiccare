@@ -31,10 +31,10 @@ const AddPayment = () => {
 
                     {/* student name section */}
                     <div className='sameLinePay'>
-                        <div style={{ display: 'flex', justifyContent: 'start', alignItems: 'center', width: '70%' }}>
+                        <div style={{ display: 'flex', justifyContent: 'start', alignItems: 'center', width: '60%' }}>
                             <p style={{ fontWeight: '600', backgroundColor: 'orange', border: '2px solid orange', padding: '4px', borderRadius: '5px 0 5px 0', width: '100px' }}>Name:</p><input type="text" className='idInput' placeholder='Please Enter Name' style={{ marginLeft: '-4px', width: '100%' }} />
                         </div>
-                        <div style={{ display: 'flex', justifyContent: 'start', alignItems: 'center', width: '30%' }}>
+                        <div style={{ display: 'flex', justifyContent: 'start', alignItems: 'center', width: '35%' }}>
                             <p style={{ marginLeft: '10px', fontWeight: '600', backgroundColor: 'orange', border: '2px solid orange', padding: '5px', borderRadius: '5px 0 5px 0', width: '180px' }}>Month's Name:</p><input type="text" placeholder='Enter Month' className='idInput' style={{ marginLeft: '-4px', height: '32px' }} />
                         </div>
                     </div>

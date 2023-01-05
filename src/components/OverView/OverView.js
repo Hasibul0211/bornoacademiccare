@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import './OverView.css';
 
-const OverView = () => {
+const OverView = ({ dcTotal }) => {
 
     const [totalStudent, setTotalStudent] = useState({})
 
     useEffect(() => {
-        fetch('https://bornoacademiccare.up.railway.app//student-count')
+        fetch('https://bornoacademiccare.up.railway.app/student-count')
             .then(res => res.json())
             .then(data => setTotalStudent(data))
     }, [])
@@ -31,11 +31,11 @@ const OverView = () => {
                     </div>
                     <div>
                         <p style={{ textTransform: 'capitalize', fontWeight: '700' }}>payment completed</p>
-                        <p style={{ fontWeight: 'bold', fontSize: '25px', margin: '0', paddingLeft: '10px' }}>10</p>
+                        <p style={{ fontWeight: 'bold', fontSize: '25px', margin: '0', paddingLeft: '10px' }}></p>
                     </div>
                     <div>
                         <p style={{ textTransform: 'capitalize', fontWeight: '700' }}>payment due</p>
-                        <p style={{ fontWeight: 'bold', fontSize: '25px', margin: '0', paddingLeft: '10px' }}>11</p>
+                        <p style={{ fontWeight: 'bold', fontSize: '25px', margin: '0', paddingLeft: '10px' }}></p>
                     </div>
                 </div>
             </section>
@@ -44,15 +44,15 @@ const OverView = () => {
                 <div className='stuOveDiv'>
                     <div>
                         <p style={{ textTransform: 'capitalize', fontWeight: '700' }}>Debit Total</p>
-                        <p style={{ fontWeight: 'bold', fontSize: '25px', margin: '0', paddingLeft: '10px' }}>21Tk</p>
+                        <p style={{ fontWeight: 'bold', fontSize: '25px', margin: '0', paddingLeft: '10px' }}></p>
                     </div>
                     <div>
                         <p style={{ textTransform: 'capitalize', fontWeight: '700' }}>Credit Total</p>
-                        <p style={{ fontWeight: 'bold', fontSize: '25px', margin: '0', paddingLeft: '10px' }}>10Tk</p>
+                        <p style={{ fontWeight: 'bold', fontSize: '25px', margin: '0', paddingLeft: '10px' }}></p>
                     </div>
                     <div>
                         <p style={{ textTransform: 'capitalize', fontWeight: '700' }}>Net Profits</p>
-                        <p style={{ fontWeight: 'bold', fontSize: '25px', margin: '0', paddingLeft: '10px' }}>11Tk</p>
+                        <p style={{ fontWeight: 'bold', fontSize: '25px', margin: '0', paddingLeft: '10px' }}>{dcTotal} Tk</p>
                     </div>
                 </div>
             </section>

@@ -40,12 +40,12 @@
 
 .amountHeader {
     display: grid;
-    grid-template-columns: 12% 33% 12% 12% 12% 12% 7%;
+    grid-template-columns: 12% 33% 12% 12% 12% 11% 8%;
 }
 
 .amountHeader div {
-    border: 1px solid white;
-    background-color: black;
+    border-right: 1px solid rgb(248, 231, 231);
+    background-color: #153462;
     color: white;
 }
 
@@ -59,13 +59,16 @@
 
 .amountData {
     display: grid;
-    grid-template-columns: 12% 33% 12% 12% 12% 12% 7%;
+    grid-template-columns: 12% 33% 12% 12% 12% 11% 8%;
+    margin-bottom: 1px;
+    background-color: #a088df;
 }
 
 .amountData div {
-    border: 1px solid white;
-    background-color: #404258;
-    color: white;
+    border-left: 1px solid rgb(248, 231, 231);
+    background-color: #a088df;
+    color: black;
+    font-weight: 600;
 }
 
 .amountData div p {
@@ -90,4 +93,19 @@
     padding: 8px;
     font-weight: bold;
     font-size: 15px;
+}
+
+
+.deletePart {
+
+    cursor: pointer;
+    width: 99%;
+
+}
+
+.deletePart:hover {
+    background-color: #153462;
+    margin-top: 0;
+    color: white;
+    border-radius: 10px;
 }

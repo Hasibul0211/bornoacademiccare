@@ -12,14 +12,19 @@ import AddPayment from './components/AddPayment/AddPayment';
 import DebitCredit from './components/DebitCredit/DebitCredit';
 import SeeAuthor from './components/Author/SeeAuthor/SeeAuthor';
 import SingleStudent from './extraComponent/SingleStudent/SingleStudent';
+import { useState } from 'react';
 function App() {
+  const [dcTotal, setdcTotal] = useState()
+
+
+
   return (
     <div className="App">
       <Routes>
         <Route path="/" element={<Login></Login>} />
         <Route path='login' element={<Login></Login>} />
         <Route path='home/' element={<Home></Home>} >
-          <Route index element={<OverView></OverView>} />
+          <Route index element={<OverView dcTotal={dcTotal}></OverView>} />
           <Route path='author' element={<Author></Author>}></Route>
           <Route path='add-author' element={<SeeAuthor></SeeAuthor>}></Route>
           {/* <Route path='overview' element={<OverView></OverView>}></Route> */}
@@ -28,7 +33,7 @@ function App() {
           <Route path='fees-record' element={<FeesRecord></FeesRecord>}></Route>
           <Route path='past-record' element={<PastFees></PastFees>}></Route>
           <Route path='add-payment' element={<AddPayment></AddPayment>}></Route>
-          <Route path='debit-credit' element={<DebitCredit />}></Route>
+          <Route path='debit-credit' element={<DebitCredit dcTotal={dcTotal} setdcTotal={setdcTotal} />}></Route>
         </Route>
         <Route path='student-single-detail/:id' element={<SingleStudent />}></Route>
 
