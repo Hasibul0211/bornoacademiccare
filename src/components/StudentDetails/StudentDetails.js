@@ -120,43 +120,41 @@ const StudentDetails = () => {
 
     }
 
-    // const [feesGet, setFeesGet] = useState()
-    // useEffect(() => {
-    //     fetch('https://bornoacademiccare.up.railway.app/fees')
-    //         .then(res => res.json())
-    //         .then(data => {
-    //             data.map(dat => setFeesGet(dat.studentId))
-    //         })
 
-    //     if (feesGet === studentDetails.studentId) {
-    //         console.log('peeyesi');
-    //     }
-    // }, [])
+    const [totalStudents, setTotalStudents] = useState({})
+
+    useEffect(() => {
+        fetch('https://bornoacademiccare.up.railway.app//student-count')
+            .then(res => res.json())
+            .then(data => setTotalStudents(data))
+    }, [])
 
 
 
 
     return (
         <div className='container'>
+            <div style={{ display: 'flex' }}>
+                <div className='shortSection'>
 
-            <div className='shortSection'>
-
-                <p>short details by Class:</p>
-                <select name='select' onChange={(e) => onChangeHandle(e)}>
-                    <option selected value="four">Four</option>
-                    <option selected value="five">Five</option>
-                    <option value="six">Six</option>
-                    <option value="seven">Seven</option>
-                    <option value="eight">Eight</option>
-                    <option value="nine">Nine</option>
-                    <option value="ten">Ten</option>
-                    <option value="eleven">Eleven</option>
-                    <option value="twelve">Twelve</option>
-                </select>
+                    <p>short details by Class:</p>
+                    <select name='select' onChange={(e) => onChangeHandle(e)}>
+                        <option selected value="four">Four</option>
+                        <option selected value="five">Five</option>
+                        <option value="six">Six</option>
+                        <option value="seven">Seven</option>
+                        <option value="eight">Eight</option>
+                        <option value="nine">Nine</option>
+                        <option value="ten">Ten</option>
+                        <option value="eleven">Eleven</option>
+                        <option value="twelve">Twelve</option>
+                    </select>
+                </div>
+                <div style={{ width: '100%', display: 'inline', textAlign: 'center' }}>
+                    <p style={{ paddingTop: '10px', textTransform: 'capitalize', fontSize: '20px', fontWeight: 'bold' }}>total added student:{totalStudents}</p>
+                </div>
             </div>
-            <div style={{ width: '100%', hBSc: '10px', backgroundColor: '#393E46' }}>
 
-            </div>
 
             <section className='infoHeader'>
                 <div style={{ width: '12%' }}><p>Id no</p> </div>

@@ -6,7 +6,7 @@ const OverView = () => {
     const [totalStudent, setTotalStudent] = useState({})
 
     useEffect(() => {
-        fetch('http://localhost:5000/student-count')
+        fetch('https://bornoacademiccare.up.railway.app//student-count')
             .then(res => res.json())
             .then(data => setTotalStudent(data))
     }, [])
