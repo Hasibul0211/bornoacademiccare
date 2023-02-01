@@ -13,6 +13,7 @@ import DebitCredit from './components/DebitCredit/DebitCredit';
 import SeeAuthor from './components/Author/SeeAuthor/SeeAuthor';
 import SingleStudent from './extraComponent/SingleStudent/SingleStudent';
 import { useState } from 'react';
+import Teachers from './components/Teachers/Teachers';
 function App() {
   const [dcTotal, setdcTotal] = useState()
 
@@ -26,6 +27,7 @@ function App() {
         <Route path='home/' element={<Home></Home>} >
           <Route index element={<OverView dcTotal={dcTotal}></OverView>} />
           <Route path='author' element={<Author></Author>}></Route>
+          <Route path='teachers' element={<Teachers></Teachers>}></Route>
           <Route path='add-author' element={<SeeAuthor></SeeAuthor>}></Route>
           {/* <Route path='overview' element={<OverView></OverView>}></Route> */}
           <Route path='student-details' element={<StudentDetails></StudentDetails>}></Route>

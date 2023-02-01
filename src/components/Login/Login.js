@@ -1,7 +1,13 @@
 import React, { useRef, useState } from 'react';
 import "./Login.css"
-import img from "../../photos/login2.png"
-import { useNavigate } from 'react-router-dom';
+import img from "../../photos/login2.png";
+
+
+import { useLocation, useNavigate } from 'react-router-dom';
+import useFirebase from '../../hocks/UseFirebase';
+
+
+
 
 
 
@@ -9,9 +15,12 @@ import { useNavigate } from 'react-router-dom';
 const Login = () => {
 
     const [data, setData] = useState(true);
-    const [email, setEmail] = useState('');
-    const [password, setPassword] = useState('')
-
+    const [email, setEmail] = useState({});
+    const [password, setPassword] = useState(
+        {}
+    )
+    // const { userRegistrationSet } = useFirebases()
+    const { userRegistration, loginUser, error } = useFirebase()
     // login details
     const emailField = useRef();
     const passField = useRef();
@@ -29,24 +38,27 @@ const Login = () => {
         setPassword(passValue)
     }
 
-    console.log(password);
+    // console.log(password);
     // navigate code here
-    const navigate = useNavigate()
+    // const navigate = useNavigate()
     const loginBtn = (e) => {
 
-        if (email === process.env.REACT_APP_EMAIL && password === process.env.REACT_APP_PASSWORD) {
-            navigate('/home')
-        }
-        else {
-            alert('username or password missmatch')
-        }
-
+        // if (email === process.env.REACT_APP_EMAIL && password === process.env.REACT_APP_PASSWORD) {
+        //     navigate('/home')
+        // }
+        // else {
+        //     alert('username or password missmatch')
+        // }
+        loginUser(email, password, location, history)
         e.preventDefault()
     }
 
 
 
     // Register details
+
+
+
 
     const regiterForm = () => {
         setData(false)
@@ -70,13 +82,22 @@ const Login = () => {
         const regPassValue = regPassField.current.value;
         setRegPass(regPassValue)
     }
+
+    const location = useLocation()
+    const history = useNavigate()
+
+
+
+
     const registerBtn = (e) => {
         const user = {
             name: regName,
             email: regEmail,
             password: regPass
         }
-        alert('register button clicked')
+        console.log(user);
+
+        userRegistration(regEmail, regPass, regName, location, history)
 
         e.preventDefault()
         e.target.reset()
@@ -107,6 +128,7 @@ const Login = () => {
                                 <br />
                                 <input type="password" placeholder='Enter Your Password' ref={passField} onChange={handleOnChange} />
                                 <br />
+
                                 <button type="submit">Login</button>
 
                             </form>

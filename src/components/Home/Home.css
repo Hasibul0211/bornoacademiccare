@@ -15,27 +15,32 @@
 
 } */
 
+
+
+
+.layoutContainerInsOne {
+    padding: 0;
+    width: 100%;
+    box-shadow: 1px 1px 1px 1px gray;
+    background-color: #153462;
+
+}
+
 .category {
     position: fixed;
     top: 63px;
     left: 0;
-    min-height: 100vh;
-    padding: 10px 20px;
+    height: 90vh;
 
-}
-
-
-.layoutContainerInsOne {
-    padding: 0 5%;
-    box-shadow: 1px 1px 1px 1px gray;
-    background-color: #153462;
+    overflow-y: scroll;
+    /* padding: 10px 20px; */
 
 
 }
-
 
 #scrl::-webkit-scrollbar {
-    width: 5px;
+    width: 2px;
+
 }
 
 .layoutContainerInsTwo {
@@ -67,7 +72,9 @@
     font-size: 35px;
     margin: 10px;
     padding: 0 0 0 15px;
-    font-family: 'Times New Roman', Times, serif;
+    font-family: 'Dancing Script', cursive;
+    font-family: 'Kalam', cursive;
+    font-family: 'Merriweather', serif;
     font-weight: bold;
 
 }
@@ -107,7 +114,9 @@
 .listedItem li {
     font-size: 18px;
     color: white;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Dancing Script', cursive;
+    font-family: 'Kalam', cursive;
+    font-family: 'Merriweather', serif;
     padding: 5px 15px;
     transition: all .5s;
     cursor: pointer;
