@@ -8,7 +8,7 @@
 
 .teacherBox {
     border: 2px solid black;
-    min-height: 200px;
+    min-height: 300px;
     width: 100%;
     border-radius: 10px;
     background-color: white;
@@ -26,6 +26,50 @@
 }
 
 .teacherName {
+    font-size: 20px;
+    text-align: center;
+    text-transform: capitalize;
+    font-family: 'Dancing Script', cursive;
+    font-family: 'Kalam', cursive;
+    font-family: 'Merriweather', serif;
+    font-weight: bold;
+    margin: 8px 0;
+}
+
+.teacherQlt {
+    font-size: 16px;
+    text-align: center;
+    text-transform: capitalize;
+    font-family: 'Dancing Script', cursive;
+    font-family: 'Kalam', cursive;
+    font-family: 'Merriweather', serif;
+    font-weight: bold;
+    margin: 0;
+}
+
+.teacherSubs {
+    font-size: 19px;
+    text-align: center;
+    text-transform: capitalize;
+    font-family: 'Dancing Script', cursive;
+    font-family: 'Kalam', cursive;
+    font-family: 'Merriweather', serif;
+    font-weight: bold;
+    margin: 0;
+}
+
+.teacherSub {
+    font-size: 15px;
+    text-align: center;
+    text-transform: capitalize;
+    font-family: 'Dancing Script', cursive;
+    font-family: 'Kalam', cursive;
+    font-family: 'Merriweather', serif;
+    font-weight: bold;
+    margin: 0;
+}
+
+.teacherPhn {
     font-size: 18px;
     text-align: center;
     text-transform: capitalize;
@@ -33,4 +77,19 @@
     font-family: 'Kalam', cursive;
     font-family: 'Merriweather', serif;
     font-weight: bold;
+    margin: 0;
+}
+
+.teacherClass {
+    font-size: 18px;
+    text-align: center;
+    text-transform: capitalize;
+    font-family: 'Dancing Script', cursive;
+    font-family: 'Kalam', cursive;
+    font-family: 'Merriweather', serif;
+    font-weight: bold;
+    margin: 0;
+    background-color: black;
+    color: white;
+    padding: 5px;
 }
