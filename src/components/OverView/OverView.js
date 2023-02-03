@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import Footer from '../Shared/Footer/Footer';
 import './OverView.css';
 
 const OverView = ({ dcTotal }) => {
@@ -15,13 +16,33 @@ const OverView = ({ dcTotal }) => {
 
 
 
-
     return (
         <div style={{ height: '100vh', backgroundColor: '#F0F2F5' }}>
             <section className='dashTop'>
                 <h3>welcome to professional dashboard</h3>
                 <p>all management tool- in one place</p>
             </section>
+
+            <section className='extad'>
+                <div>
+
+                </div>
+                <div className='extadD2'>
+                    <p>upcoming Notice</p>
+                    <marquee behavior="" direction="up" truespeed="50" height="80%" scrollamount="3">
+                        <p style={{ marginBottom: '30px' }}>upcoming exam is close to hand</p>
+                        <p style={{ marginBottom: '30px' }}>make the routine immediately</p>
+                        <p style={{ marginBottom: '30px' }}>make the routine immediately</p>
+                        <p style={{ marginBottom: '30px' }}>make the routine immediately</p>
+                        <p style={{ marginBottom: '30px' }}>make the routine immediately</p>
+                        <p style={{ marginBottom: '30px' }}>make the routine immediately</p>
+                        <p style={{ marginBottom: '30px' }}>make the routine immediately</p>
+                    </marquee>
+                </div>
+            </section>
+
+
+
             <section className='stuOverview'>
                 <h3>student's overviews</h3>
                 <div className='stuOveDiv'>
@@ -57,7 +78,13 @@ const OverView = ({ dcTotal }) => {
                 </div>
             </section>
 
-
+            <section>
+                <p style={{
+                    textAlign: 'center', fontSize: '25px', padding:
+                        '10px', fontFamily: 'cursive', backgroundColor: "green"
+                }}>another section coming soon</p>
+            </section>
+            <Footer></Footer>
         </div>
     );
 };

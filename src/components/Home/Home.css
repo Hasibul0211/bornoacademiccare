@@ -2,9 +2,14 @@
     overflow-x: hidden;
 } */
 
+/* * {
+    overflow-y: hidden;
+} */
+
 .layoutContainer {
     display: grid;
     grid-template-columns: 20% 80%;
+
 
 
 }
@@ -19,10 +24,11 @@
 
 
 .layoutContainerInsOne {
-    padding: 0;
+    height: 100vh;
     width: 100%;
     box-shadow: 1px 1px 1px 1px gray;
     background-color: #153462;
+    overflow-y: scroll;
 
 }
 
@@ -30,12 +36,13 @@
     position: fixed;
     top: 63px;
     left: 0;
+
     height: 90vh;
-
+    background-color: #153462;
     overflow-y: scroll;
-    /* padding: 10px 20px; */
+    /* padding: 10px 15px; */
 
-
+    padding: 10px 35px 0 0;
 }
 
 #scrl::-webkit-scrollbar {
@@ -45,9 +52,10 @@
 
 .layoutContainerInsTwo {
     box-shadow: 1px 1px 1px 1px gray;
-    min-height: 100vh;
-    /* overflow-y: scroll; */
+    height: 91vh;
+    overflow-y: scroll;
     background-color: #F0F2F5;
+
     padding-top: 5%;
 }
 

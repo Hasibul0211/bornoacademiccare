@@ -5,7 +5,7 @@ import profileImg from '../../photos/student.jpg';
 const Teachers = () => {
     return (
         <div>
-            <p style={{ textAlign: 'center', textTransform: 'capitalize' }}>this is teacehrs page</p>
+            <p style={{ textAlign: 'center', textTransform: 'capitalize', backgroundColor: "violet", padding: '5px', fontWeight: 'bold', fontSize: '23px' }}>Teacher Identification</p>
             <section className='teacherContainer'>
                 <div className='teacherBox'>
                     <div className='teacherImg'>
