@@ -99,6 +99,9 @@ const Home = () => {
                                         <li>
                                             <Link to="add-author" style={{ textDecoration: 'none', color: 'white', fontSize: '15px', marginLeft: '20px' }}>Add Author</Link>
                                         </li>
+                                        <li>
+                                            <Link to="add-notice" style={{ textDecoration: 'none', color: 'white', fontSize: '15px', marginLeft: '20px' }}>Add Notice</Link>
+                                        </li>
 
                                     </div>
 

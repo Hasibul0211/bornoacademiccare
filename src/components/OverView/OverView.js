@@ -60,6 +60,37 @@ const OverView = ({ dcTotal }) => {
                     </div>
                 </div>
             </section>
+
+            <section className='stuOverview'>
+                <h3>Monthly total class taken of any individual teacher</h3>
+                <div className='stuOveDiv'>
+                    <div>
+                        <p style={{ textTransform: 'capitalize', fontWeight: '700', fontSize: '20px' }}>Raj Sir</p>
+                        <p style={{ fontWeight: 'bold', fontSize: '22px', margin: '0', paddingLeft: '10px' }}>Total Taken: 00</p>
+                    </div>
+                    <div>
+                        <p style={{ textTransform: 'capitalize', fontWeight: '700', fontSize: '20px' }}>Shanto Sir</p>
+                        <p style={{ fontWeight: 'bold', fontSize: '22px', margin: '0', paddingLeft: '10px' }}>Total Taken: 00</p>
+                    </div>
+                    <div>
+                        <p style={{ textTransform: 'capitalize', fontWeight: '700', fontSize: '20px' }}>Sohel Sir</p>
+                        <p style={{ fontWeight: 'bold', fontSize: '22px', margin: '0', paddingLeft: '10px' }}>Total Taken: 00</p>
+                    </div>
+                    <div>
+                        <p style={{ textTransform: 'capitalize', fontWeight: '700', fontSize: '20px' }}>Pranto Sir</p>
+                        <p style={{ fontWeight: 'bold', fontSize: '22px', margin: '0', paddingLeft: '10px' }}>Total Taken: 00</p>
+                    </div>
+                    <div>
+                        <p style={{ textTransform: 'capitalize', fontWeight: '700', fontSize: '20px' }}>Masum Sir</p>
+                        <p style={{ fontWeight: 'bold', fontSize: '22px', margin: '0', paddingLeft: '10px' }}>Total Taken: 00</p>
+                    </div>
+                    <div>
+                        <p style={{ textTransform: 'capitalize', fontWeight: '700', fontSize: '20px' }}></p>
+                        <p style={{ fontWeight: 'bold', fontSize: '22px', margin: '0', paddingLeft: '10px' }}></p>
+                    </div>
+                </div>
+            </section>
+
             <section className='stuOverview'>
                 <h3>Debit Credit Overviews</h3>
                 <div className='stuOveDiv'>
@@ -77,6 +108,9 @@ const OverView = ({ dcTotal }) => {
                     </div>
                 </div>
             </section>
+
+
+
 
             <section>
                 <p style={{

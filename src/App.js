@@ -14,6 +14,7 @@ import SeeAuthor from './components/Author/SeeAuthor/SeeAuthor';
 import SingleStudent from './extraComponent/SingleStudent/SingleStudent';
 import { useState } from 'react';
 import Teachers from './components/Teachers/Teachers';
+import AddNotice from './components/AddNotice/AddNotice';
 function App() {
   const [dcTotal, setdcTotal] = useState()
 
@@ -35,6 +36,7 @@ function App() {
           <Route path='fees-record' element={<FeesRecord></FeesRecord>}></Route>
           <Route path='past-record' element={<PastFees></PastFees>}></Route>
           <Route path='add-payment' element={<AddPayment></AddPayment>}></Route>
+          <Route path='add-notice' element={<AddNotice />}></Route>
           <Route path='debit-credit' element={<DebitCredit dcTotal={dcTotal} setdcTotal={setdcTotal} />}></Route>
         </Route>
         <Route path='student-single-detail/:id' element={<SingleStudent />}></Route>

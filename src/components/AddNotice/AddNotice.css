@@ -1,0 +1,30 @@
+.noticeHeader {
+    text-align: center;
+    font-size: 30px;
+    margin-top: 2%;
+
+}
+
+.noticeHolder {
+    width: 80%;
+    margin: 1px auto;
+    text-align: center;
+}
+
+.noticeText {
+    height: 30px;
+    width: 40%;
+}
+
+.noticeDate {
+    height: 30px;
+    width: 15%;
+    margin-left: 5px;
+}
+
+.noticeBtn {
+    height: 33px;
+    width: 15%;
+    cursor: pointer;
+    margin-left: 5px;
+}
