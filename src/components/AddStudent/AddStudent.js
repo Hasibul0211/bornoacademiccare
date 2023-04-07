@@ -107,39 +107,45 @@ const AddStudent = () => {
 
     return (
         <div className='container'>
-            <section>
+            {/* <section>
                 <p style={{ textAlign: 'center', fontWeight: '600', fontFamily: 'new Times roman', fontSize: '20px', backgroundColor: '#153462', marginLeft: '20%', marginRight: '20%', padding: '10px', borderRadius: '10px', color: 'white' }}>Add Student Information</p>
-            </section>
+            </section> */}
             <section>
                 <div>
-                    <h1 style={{ textAlign: 'center', color: '#153462', fontSize: '35px', margin: '1px', fontFamily: "cursive" }}>Borno Academic Care</h1>
-                    <address style={{ textAlign: 'center', color: '#153462', fontSize: '15px', margin: '1px', padding: '1px', fontWeight: '800' }}>East Arichpur,Shaheed Smrity School road,Jamaibajar</address>
+                    <h1 style={{ textAlign: 'center', color: '#153462', fontSize: '25px', margin: '1px', fontFamily: "cursive" }}>Borno Academic Care</h1>
+                    <address style={{ textAlign: 'center', color: '#153462', fontSize: '12px', margin: '1px', padding: '1px', fontWeight: '800' }}>East Arichpur,Shaheed Smrity School road,Jamaibajar</address>
                     <hr />
                 </div>
                 <form onSubmit={submitStudentInfo}>
                     <div className='sameLine'>
                         <div style={{ display: 'flex', justifyContent: 'start', alignItems: 'center' }}>
-                            <p style={{ fontWeight: '600', backgroundColor: '#153462', border: '2px solid #153462', padding: '4px', borderRadius: '5px 0 5px 0', color: 'white' }}>Student Id:</p><input type="number" className='idInput' placeholder='Please Enter Id' style={{ marginLeft: '-4px' }} ref={id} onChange={handleOnChangeStudent} />
+                            <p style={{ fontWeight: '500', backgroundColor: '#153462', border: '2px solid #153462', padding: '2px', borderRadius: '5px 0 5px 0', color: 'white', fontSize: '15px' }}>Student Id:</p>
+                            <input type="number" className='idInput' placeholder='Please Enter Id' style={{ marginLeft: '-4px' }} ref={id} onChange={handleOnChangeStudent} required />
                         </div>
                         <div style={{ display: 'flex', justifyContent: 'start', alignItems: 'center' }}>
-                            <p style={{ fontWeight: '600', backgroundColor: '#153462', border: '2px solid #153462', padding: '4px', borderRadius: '5px 0 5px 0', color: 'white' }}>Tution Fee:</p><input type="number" className='idInput' placeholder='Please Enter amount' style={{ marginLeft: '-4px' }} ref={tuitionFee} onChange={handleOnChangeStudent} />
+                            <p style={{ fontWeight: '600', backgroundColor: '#153462', border: '2px solid #153462', padding: '2px', borderRadius: '5px 0 5px 0', color: 'white', fontSize: '15px' }}>Tution Fee:</p>
+                            <input type="number" className='idInput' placeholder='Please Enter amount' style={{ marginLeft: '-4px' }} ref={tuitionFee} onChange={handleOnChangeStudent} required />
                         </div>
                         <div style={{ display: 'flex', justifyContent: 'start', alignItems: 'center' }}>
-                            <p style={{ marginLeft: '10px', fontWeight: '600', backgroundColor: '#153462', border: '2px solid #153462', padding: '4px', borderRadius: '5px 0 5px 0', color: 'white' }}>Date of Admission:</p><input type="date" className='idInput' style={{ marginLeft: '-4px', height: '32px' }} ref={dateValue} onChange={handleOnChangeStudent} />
+                            <p style={{ marginLeft: '10px', fontWeight: '600', backgroundColor: '#153462', border: '2px solid #153462', padding: '2px', borderRadius: '5px 0 5px 0', color: 'white', fontSize: '15px' }}>Date of Admission:</p>
+                            <input type="date" className='idInput' style={{ marginLeft: '-4px', height: '24px' }} ref={dateValue} onChange={handleOnChangeStudent} required />
                         </div>
                     </div>
                     <div style={{ display: 'flex', justifyContent: 'start', alignItems: 'center' }} className='sameLine'>
-                        <p style={{ fontWeight: '600', backgroundColor: '#153462', border: '2px solid #153462', padding: '4px', borderRadius: '5px 0 5px 0', color: 'white' }}>Student Name:</p><input type="text" className='idInput' style={{ width: '81%', marginLeft: '-4px' }} placeholder='Please Enter Student Name' ref={name} onChange={handleOnChangeStudent} />
+                        <p style={{ fontWeight: '600', backgroundColor: '#153462', border: '2px solid #153462', padding: '2px', borderRadius: '5px 0 5px 0', color: 'white', fontSize: '15px' }}>Student Name:</p>
+                        <input type="text" className='idInput' style={{ width: '81%', marginLeft: '-4px' }} placeholder='Please Enter Student Name' ref={name} onChange={handleOnChangeStudent} required />
                     </div>
 
                     {/* father info */}
 
                     <div className='sameLine'>
                         <div style={{ display: 'flex', justifyContent: 'start', alignItems: 'center', width: '700px' }}>
-                            <p style={{ fontWeight: '600', backgroundColor: '#153462', border: '2px solid #153462', padding: '4px', borderRadius: '5px 0 5px 0', color: 'white' }}>Father's Name:</p><input type="text" className='idInput' style={{ width: '80%', marginLeft: '-4px' }} placeholder='Please Enter Father Name' ref={fatherName} onChange={handleOnChangeStudent} />
+                            <p style={{ fontWeight: '600', backgroundColor: '#153462', border: '2px solid #153462', padding: '2px', borderRadius: '5px 0 5px 0', color: 'white', fontSize: '15px' }}>Father's Name:</p>
+                            <input type="text" className='idInput' style={{ width: '80%', marginLeft: '-4px' }} placeholder='Please Enter Father Name' ref={fatherName} onChange={handleOnChangeStudent} required />
                         </div>
                         <div style={{ display: 'flex', justifyContent: 'start', alignItems: 'center' }}>
-                            <p style={{ fontWeight: '600', backgroundColor: '#153462', border: '2px solid #153462', padding: '4px', borderRadius: '5px 0 5px 0', color: 'white' }}>Mobile:</p><input type="number" className='idInput' placeholder='Please Enter Mobile No' style={{ marginLeft: '-4px' }} ref={fatherMobile} onChange={handleOnChangeStudent} />
+                            <p style={{ fontWeight: '600', backgroundColor: '#153462', border: '2px solid #153462', padding: '2px', borderRadius: '5px 0 5px 0', color: 'white', fontSize: '15px' }}>Mobile:</p>
+                            <input type="number" className='idInput' placeholder='Please Enter Mobile No' style={{ marginLeft: '-4px' }} ref={fatherMobile} onChange={handleOnChangeStudent} required />
                         </div>
 
                     </div>
@@ -148,10 +154,12 @@ const AddStudent = () => {
 
                     <div className='sameLine'>
                         <div style={{ display: 'flex', justifyContent: 'start', alignItems: 'center', width: '700px' }}>
-                            <p style={{ fontWeight: '600', backgroundColor: '#153462', border: '2px solid #153462', padding: '4px', borderRadius: '5px 0 5px 0', color: 'white' }}>Mother's Name:</p><input type="text" className='idInput' style={{ width: '79%', marginLeft: '-4px' }} placeholder='Please Enter Mother Name' ref={motherName} onChange={handleOnChangeStudent} />
+                            <p style={{ fontWeight: '600', backgroundColor: '#153462', border: '2px solid #153462', padding: '2px', borderRadius: '5px 0 5px 0', color: 'white', fontSize: '15px' }}>Mother's Name:</p>
+                            <input type="text" className='idInput' style={{ width: '79%', marginLeft: '-4px' }} placeholder='Please Enter Mother Name' ref={motherName} onChange={handleOnChangeStudent} required />
                         </div>
                         <div style={{ display: 'flex', justifyContent: 'start', alignItems: 'center' }}>
-                            <p style={{ fontWeight: '600', backgroundColor: '#153462', border: '2px solid #153462', padding: '4px', borderRadius: '5px 0 5px 0', color: "white" }}>Mobile:</p><input type="number" className='idInput' placeholder='Please Enter Mobile No' style={{ marginLeft: '-4px' }} ref={motherMobile} onChange={handleOnChangeStudent} />
+                            <p style={{ fontWeight: '600', backgroundColor: '#153462', border: '2px solid #153462', padding: '2px', borderRadius: '5px 0 5px 0', color: "white", fontSize: '15px' }}>Mobile:</p>
+                            <input type="number" className='idInput' placeholder='Please Enter Mobile No' style={{ marginLeft: '-4px' }} ref={motherMobile} onChange={handleOnChangeStudent} required />
                         </div>
 
                     </div>
@@ -159,31 +167,38 @@ const AddStudent = () => {
                     {/* class info here */}
                     <div className='sameLine'>
                         <div style={{ display: 'flex', justifyContent: 'start', alignItems: 'center', width: '330px' }}>
-                            <p style={{ fontWeight: '600', paddingRight: '10px', backgroundColor: '#153462', border: '2px solid #153462', padding: '4px', borderRadius: '5px 0 5px 0', color: 'white' }}>Class: </p><input type="text" className='idInput' placeholder='Please Enter Class' style={{ width: '60%', marginLeft: '-4px' }} ref={classes} onChange={handleOnChangeStudent} />
+                            <p style={{ fontWeight: '600', paddingRight: '10px', backgroundColor: '#153462', border: '2px solid #153462', padding: '2px', borderRadius: '5px 0 5px 0', color: 'white', fontSize: '15px' }}>Class: </p>
+                            <input type="text" className='idInput' placeholder='Please Enter Class' style={{ width: '60%', marginLeft: '-4px' }} ref={classes} onChange={handleOnChangeStudent} required />
                         </div>
 
                         {/* age info here */}
                         <div style={{ display: 'flex', justifyContent: 'start', alignItems: 'center', width: '400px' }}>
-                            <p style={{ fontWeight: '600', paddingRight: '10px', backgroundColor: '#153462', border: '2px solid #153462', padding: '4px', borderRadius: '5px 0 5px 0', color: 'white' }}>Age: </p><input type="number" className='idInput' placeholder='Please Enter Age' style={{ width: '60%', marginLeft: '-4px' }} ref={age} onChange={handleOnChangeStudent} />
+                            <p style={{ fontWeight: '600', paddingRight: '10px', backgroundColor: '#153462', border: '2px solid #153462', padding: '2px', borderRadius: '5px 0 5px 0', color: 'white', fontSize: '15px' }}>Age: </p>
+                            <input type="number" className='idInput' placeholder='Please Enter Age' style={{ width: '60%', marginLeft: '-4px' }} ref={age} onChange={handleOnChangeStudent} required />
                         </div>
                         <div style={{ display: 'flex', justifyContent: 'start', alignItems: 'center' }}>
-                            <p style={{ marginLeft: '10px', fontWeight: '600', backgroundColor: '#153462', border: '2px solid #153462', padding: '4px', borderRadius: '5px 0 5px 0', color: 'white' }}>Date of Birth</p><input type="date" className='idInput' style={{ marginLeft: '-4px', height: '32px' }} ref={birthValue} onChange={handleOnChangeStudent} />
+                            <p style={{ marginLeft: '10px', fontWeight: '600', backgroundColor: '#153462', border: '2px solid #153462', padding: '2px', borderRadius: '5px 0 5px 0', color: 'white', fontSize: '15px' }}>Date of Birth</p>
+                            <input type="date" className='idInput' style={{ marginLeft: '-4px', height: '24px' }} ref={birthValue} onChange={handleOnChangeStudent} required />
                         </div>
                     </div>
                     <div style={{ display: 'flex', justifyContent: 'start', alignItems: 'center' }} className='sameLine'>
-                        <p style={{ fontWeight: '600', backgroundColor: '#153462', border: '2px solid #153462', padding: '4px', borderRadius: '5px 0 5px 0', color: 'white' }}>School Name:</p><input type="text" className='idInput' style={{ width: '80%', marginLeft: '-4px' }} placeholder='Please Enter School Name' ref={school} onChange={handleOnChangeStudent} />
+                        <p style={{ fontWeight: '600', backgroundColor: '#153462', border: '2px solid #153462', padding: '2px', borderRadius: '5px 0 5px 0', color: 'white', fontSize: '15px' }}>School Name:</p>
+                        <input type="text" className='idInput' style={{ width: '80%', marginLeft: '-4px' }} placeholder='Please Enter School Name' ref={school} onChange={handleOnChangeStudent} required />
                     </div>
                     <div style={{ display: 'flex', justifyContent: 'start', alignItems: 'center', margin: '1px' }} className='sameLine'>
-                        <p style={{ fontWeight: '600', backgroundColor: '#153462', border: '2px solid #153462', padding: '4px', borderRadius: '5px 0 5px 0', color: 'white' }}>Address:</p><input type="text" className='idInput' style={{ width: '84.3%', marginLeft: '-4px' }} placeholder='Please Enter Address' ref={address} onChange={handleOnChangeStudent} />
+                        <p style={{ fontWeight: '600', backgroundColor: '#153462', border: '2px solid #153462', padding: '2px', borderRadius: '5px 0 5px 0', color: 'white', fontSize: '15px' }}>Address:</p>
+                        <input type="text" className='idInput' style={{ width: '84.3%', marginLeft: '-4px' }} placeholder='Please Enter Address' ref={address} onChange={handleOnChangeStudent} required />
                     </div>
 
                     {/* local gurdian info */}
                     <div className='sameLine'>
                         <div style={{ display: 'flex', justifyContent: 'start', alignItems: 'center', width: '700px' }}>
-                            <p style={{ fontWeight: '600', backgroundColor: '#153462', border: '2px solid #153462', padding: '4px', borderRadius: '5px 0 5px 0', color: 'white' }}>Gurdian Name:</p><input type="text" className='idInput' style={{ width: '79%', marginLeft: '-4px' }} placeholder='Please Enter Gurdian Name' ref={gurdian} onChange={handleOnChangeStudent} />
+                            <p style={{ fontWeight: '600', backgroundColor: '#153462', border: '2px solid #153462', padding: '2px', borderRadius: '5px 0 5px 0', color: 'white', fontSize: '15px' }}>Gurdian Name:</p>
+                            <input type="text" className='idInput' style={{ width: '79%', marginLeft: '-4px' }} placeholder='Please Enter Gurdian Name' ref={gurdian} onChange={handleOnChangeStudent} required />
                         </div>
                         <div style={{ display: 'flex', justifyContent: 'start', alignItems: 'center' }}>
-                            <p style={{ fontWeight: '600', backgroundColor: '#153462', border: '2px solid #153462', padding: '4px', borderRadius: '5px 0 5px 0', color: 'white' }}>Mobile:</p><input type="number" className='idInput' placeholder='Please Enter Mobile No' style={{ marginLeft: '-4px' }} ref={gurdianMobile} onChange={handleOnChangeStudent} />
+                            <p style={{ fontWeight: '600', backgroundColor: '#153462', border: '2px solid #153462', padding: '2px', borderRadius: '5px 0 5px 0', color: 'white', fontSize: '15px' }}>Mobile:</p>
+                            <input type="number" className='idInput' placeholder='Please Enter Mobile No' style={{ marginLeft: '-4px' }} ref={gurdianMobile} onChange={handleOnChangeStudent} required />
                         </div>
 
                     </div>

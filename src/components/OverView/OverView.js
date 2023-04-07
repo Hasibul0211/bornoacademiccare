@@ -13,7 +13,10 @@ const OverView = ({ dcTotal }) => {
     }, [])
 
 
-
+    const [notic, setNotic] = useState([]);
+    useEffect(() => {
+        fetch('http://localhost:5000/notice').then(res => res.json()).then(data => setNotic(data))
+    }, [])
 
 
     return (
@@ -30,13 +33,18 @@ const OverView = ({ dcTotal }) => {
                 <div className='extadD2'>
                     <p>upcoming Notice</p>
                     <marquee behavior="" direction="up" truespeed="50" height="80%" scrollamount="3">
-                        <p style={{ marginBottom: '30px' }}>upcoming exam is close to hand</p>
+                        {
+                            notic.map(notice =>
+                                <p style={{ marginBottom: '30px' }}>{notice.description} on {notice.date}</p>
+                            )
+                        }
+                        {/* <p style={{ marginBottom: '30px' }}>upcoming exam is close to hand</p>
                         <p style={{ marginBottom: '30px' }}>make the routine immediately</p>
                         <p style={{ marginBottom: '30px' }}>make the routine immediately</p>
                         <p style={{ marginBottom: '30px' }}>make the routine immediately</p>
                         <p style={{ marginBottom: '30px' }}>make the routine immediately</p>
                         <p style={{ marginBottom: '30px' }}>make the routine immediately</p>
-                        <p style={{ marginBottom: '30px' }}>make the routine immediately</p>
+                        <p style={{ marginBottom: '30px' }}>make the routine immediately</p> */}
                     </marquee>
                 </div>
             </section>
