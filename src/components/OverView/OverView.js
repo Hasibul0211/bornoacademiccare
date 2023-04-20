@@ -15,7 +15,7 @@ const OverView = ({ dcTotal }) => {
 
     const [notic, setNotic] = useState([]);
     useEffect(() => {
-        fetch('http://localhost:5000/notice').then(res => res.json()).then(data => setNotic(data))
+        fetch('https://bornoacademiccare.up.railway.app/notice').then(res => res.json()).then(data => setNotic(data))
     }, [])
 
 
